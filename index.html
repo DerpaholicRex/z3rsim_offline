@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<base href="/">
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><script type="text/javascript" async="" src="analytics.js"></script><script type="text/javascript" async="" src="js"></script><script async="" src="js_002"></script><script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-100323559-2');</script><meta charset="utf-8"><title>Z3R Simulator</title><!-- base href="https://z3rsim.com/" --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="https://z3rsim.com/assets/triforce.png"><link href="css.css" rel="stylesheet"><link href="font-awesome.min.css" rel="stylesheet"><script src="jquery-3.3.1.min.js"></script><script src="bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><link rel="manifest" href="https://z3rsim.com/manifest.json"><link href="styles.5489cd802fb272d9f298.bundle.css" rel="stylesheet"><style>.whole-app[_ngcontent-c0]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:100vh}.dark-theme[_ngcontent-c0]{background-color:var(--dark-background-color)}.container[_ngcontent-c0]{margin-top:3%}.top-container[_ngcontent-c0]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.top-container-title[_ngcontent-c0]{margin:10px}.title[_ngcontent-c0]{margin-bottom:0;cursor:pointer}.dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .title[_ngcontent-c0]{color:var(--dark-text-color)}.version-text[_ngcontent-c0]{font-size:14px;color:#555}.dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .version-text[_ngcontent-c0]{color:var(--dark-text-light-color)}.in-between[_ngcontent-c0]{-webkit-box-flex:2;-ms-flex-positive:2;flex-grow:2}.navbar[_ngcontent-c0]{margin-bottom:0;border-radius:0}footer[_ngcontent-c0]{background-color:#333;color:#ccc;text-align:center;width:100%;padding:1rem;padding-top:2rem;margin-top:10px;z-index:5}.fa-twitter[_ngcontent-c0]{font-size:24px}.green-text[_ngcontent-c0]{color:#90ee90}.glitched-text[_ngcontent-c0]{color:#00bfff}.yellow-text[_ngcontent-c0]{color:#ff0}.white-text[_ngcontent-c0]{color:#fff}.blue-text[_ngcontent-c0]{color:#add8e6}@media (max-width:768px){.container[_ngcontent-c0]{padding:0;margin-top:0}.top-container[_ngcontent-c0]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}@media (max-width:992px){.container[_ngcontent-c0]{width:100%}}.dark-theme[_ngcontent-c0]   .modal-body[_ngcontent-c0], .dark-theme[_ngcontent-c0]   .modal-header[_ngcontent-c0]{background-color:var(--dark-background-color);color:var(--dark-text-color)}.dark-theme[_ngcontent-c0]   .modal-header[_ngcontent-c0]   .close[_ngcontent-c0]{color:#fff;opacity:1}.dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .btn-default[_ngcontent-c0]{color:var(--dark-text-color);background-color:var(--dark-background-color)}.dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .active[_ngcontent-c0], .dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .btn-default[_ngcontent-c0]:active, .dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .btn-default[_ngcontent-c0]:focus, .dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .btn-default[_ngcontent-c0]:hover{background-color:var(--dark-background-light-color)}.dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .btn-default[_ngcontent-c0]:active:hover{background-color:var(--dark-background-med-color)}.dark-theme[_ngcontent-c0]   *[_ngcontent-c0]   .btn.active[_ngcontent-c0]{box-shadow:inset 0 3px 5px rgba(0,0,0,.5)}</style><style>#seed-num-input[_ngcontent-c1]{max-width:300px}.fa-question-circle[_ngcontent-c1]{vertical-align:super;font-size:12px}.question-mark[_ngcontent-c1]{cursor:pointer}.super-text[_ngcontent-c1]{vertical-align:super}.support-text[_ngcontent-c1]{margin-top:60px;margin-bottom:60px}.mystery-info[_ngcontent-c1], .support-text[_ngcontent-c1]{text-align:center}.seed-type-descriptor[_ngcontent-c1]{margin-bottom:0;padding-top:7px}.mode-select-radio[_ngcontent-c1]{margin-bottom:10px}.dark-theme[_nghost-c1]   .control-label[_ngcontent-c1], .dark-theme   [_nghost-c1]   .control-label[_ngcontent-c1], .dark-theme[_nghost-c1]   .super-text[_ngcontent-c1], .dark-theme   [_nghost-c1]   .super-text[_ngcontent-c1], .dark-theme[_nghost-c1]   h3[_ngcontent-c1], .dark-theme   [_nghost-c1]   h3[_ngcontent-c1], .dark-theme[_nghost-c1]   p[_ngcontent-c1], .dark-theme   [_nghost-c1]   p[_ngcontent-c1]{color:var(--dark-text-color)}.dark-theme[_nghost-c1]   .form-control[_ngcontent-c1], .dark-theme   [_nghost-c1]   .form-control[_ngcontent-c1]{color:var(--dark-text-color);background-color:var(--dark-background-color)}.dark-theme[_nghost-c1]   .form-control[disabled][_ngcontent-c1], .dark-theme   [_nghost-c1]   .form-control[disabled][_ngcontent-c1]{color:var(--dark-text-color);background-color:var(--dark-background-light-color)}.dark-theme[_nghost-c1]   .btn-default[_ngcontent-c1], .dark-theme   [_nghost-c1]   .btn-default[_ngcontent-c1]{color:var(--dark-text-color);background-color:var(--dark-background-color)}.dark-theme[_nghost-c1]   .active[_ngcontent-c1], .dark-theme   [_nghost-c1]   .active[_ngcontent-c1], .dark-theme[_nghost-c1]   .btn-default[_ngcontent-c1]:active, .dark-theme   [_nghost-c1]   .btn-default[_ngcontent-c1]:active, .dark-theme[_nghost-c1]   .btn-default[_ngcontent-c1]:focus, .dark-theme   [_nghost-c1]   .btn-default[_ngcontent-c1]:focus, .dark-theme[_nghost-c1]   .btn-default[_ngcontent-c1]:hover, .dark-theme   [_nghost-c1]   .btn-default[_ngcontent-c1]:hover{background-color:var(--dark-background-light-color)}.dark-theme[_nghost-c1]   .btn-default[_ngcontent-c1]:active:hover, .dark-theme   [_nghost-c1]   .btn-default[_ngcontent-c1]:active:hover{background-color:var(--dark-background-med-color)}.dark-theme[_nghost-c1]   .btn.active[_ngcontent-c1], .dark-theme   [_nghost-c1]   .btn.active[_ngcontent-c1]{box-shadow:inset 0 3px 5px rgba(0,0,0,.5)}</style><style>.game-obj[_ngcontent-c2]{padding-left:0;padding-right:0}.title[_ngcontent-c2]{margin-top:0}h1[_ngcontent-c2]{padding-left:15px}@media (max-width:768px){.container-fluid[_ngcontent-c2]{padding-left:2px;padding-right:2px}h1[_ngcontent-c2]{margin-top:2px}}</style><style>div[_ngcontent-c3]{background-color:#000}.container-fluid[_ngcontent-c3]{padding-left:0;padding-right:0}.rupee-count[_ngcontent-c3]{color:#555;padding-right:6px;text-align:end;float:right}.dark-theme[_nghost-c3]   .rupee-count[_ngcontent-c3], .dark-theme   [_nghost-c3]   .rupee-count[_ngcontent-c3]{color:var(--dark-text-light-color)}.col-xs-2[_ngcontent-c3]{padding:0}.col-lg-5ths[_ngcontent-c3], .col-md-5ths[_ngcontent-c3], .col-sm-5ths[_ngcontent-c3], .col-xs-5ths[_ngcontent-c3]{position:relative;min-height:1px;padding-right:0;padding-left:0}.col-xs-5ths[_ngcontent-c3]{width:20%;float:left}@media (min-width:768px){.col-sm-5ths[_ngcontent-c3]{width:20%;float:left}}@media (min-width:992px){.col-md-5ths[_ngcontent-c3]{width:20%;float:left}}@media (min-width:1200px){.col-lg-5ths[_ngcontent-c3]{width:20%;float:left}}@media (max-width:768px){.rupee-count[_ngcontent-c3]{padding-right:3px;font-size:12px}}</style><style>.map[_ngcontent-c4]{position:relative;width:100%;padding-top:100%;background-size:contain;background-repeat:no-repeat;background-position:50%;background-color:#000}.aligned-right[_ngcontent-c4]{float:right}app-dungeon-items[_ngcontent-c4]{position:absolute;top:0}.map-footer[_ngcontent-c4]{width:100%;height:20px;background-color:#000;color:#fff;text-align:center}.icon[_ngcontent-c4]{width:20px}@media (max-width:768px){.map-footer[_ngcontent-c4]{height:40px;line-height:40px}.map-footer[_ngcontent-c4]   span[_ngcontent-c4]{display:inline-block;vertical-align:middle;line-height:normal}}</style><style>hr[_ngcontent-c5]{margin-top:8px;margin-bottom:8px;height:6px;border:0;box-shadow:inset 0 3px 3px -3px rgba(0,0,0,.5)}.item-log-body[_ngcontent-c5]{height:400px;padding:10px;overflow-y:scroll}.dark-theme[_nghost-c5]   .item-log-body[_ngcontent-c5], .dark-theme   [_nghost-c5]   .item-log-body[_ngcontent-c5]{background-color:#141414}.panel-heading[_ngcontent-c5]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.dark-theme[_nghost-c5]   .panel-heading[_ngcontent-c5], .dark-theme   [_nghost-c5]   .panel-heading[_ngcontent-c5]{background-color:#191970}.dark-theme[_nghost-c5]   .panel-heading[_ngcontent-c5], .dark-theme   [_nghost-c5]   .panel-heading[_ngcontent-c5], .dark-theme[_nghost-c5]   .panel-info[_ngcontent-c5], .dark-theme   [_nghost-c5]   .panel-info[_ngcontent-c5]{border-color:#7b68ee}.form-control[_ngcontent-c5]{display:initial;width:100%}.dark-theme[_nghost-c5]   .form-control[_ngcontent-c5], .dark-theme   [_nghost-c5]   .form-control[_ngcontent-c5]{color:var(--dark-text-color);background-color:var(--dark-background-color)}.btn-default.active[_ngcontent-c5]{background-color:#363636;color:#fff}.btn-default.active[_ngcontent-c5]:focus{background-color:#696969}.btn-default.active[_ngcontent-c5]:hover{background-color:#5e5e5e}@media (min-width:768px){.item-log-body[_ngcontent-c5]{height:400px}}@media (min-width:992px){.item-log-body[_ngcontent-c5]{height:400px}}@media (min-width:1200px){.item-log-body[_ngcontent-c5]{height:498px}}</style><style></style><style>.dungeon-chest[_ngcontent-c9], .dungeon-node-bg[_ngcontent-c9], .dungeon-prize[_ngcontent-c9], .node[_ngcontent-c9]{background-size:cover}.counter[_ngcontent-c9]{position:absolute;bottom:-2px;right:7px;font-size:22px}.counter-smaller[_ngcontent-c9]{font-size:17px;bottom:-7px}.dungeon-chest[_ngcontent-c9], .dungeon-node-bg[_ngcontent-c9], .node[_ngcontent-c9]{width:100%;padding-bottom:100%;height:0}.off[_ngcontent-c9]{opacity:.25}div[_ngcontent-c9]{color:#fff}.dungeon-node[_ngcontent-c9]{width:100%}.dungeon-node-bg[_ngcontent-c9]{position:absolute}.dungeon-initials[_ngcontent-c9], .dungeon-prize[_ngcontent-c9]{position:relative;top:25%;width:50%;padding-top:50%}.dungeon-initials[_ngcontent-c9]{background-size:contain;background-repeat:no-repeat}.dungeon-prize[_ngcontent-c9]{left:50%}.mm-medallion-text[_ngcontent-c9], .tr-medallion-text[_ngcontent-c9]{position:absolute;font-weight:700;color:#ddd}.mm-medallion-text[_ngcontent-c9]{top:33px}.tr-medallion-text[_ngcontent-c9]{top:5px;right:9px}.dungeon-chest[_ngcontent-c9]{text-align:center;font-size:30px;font-weight:700}.dungeon-keys[_ngcontent-c9]{display:-webkit-box;display:-ms-flexbox;display:flex}.big-key-icon[_ngcontent-c9], .small-keys-icon[_ngcontent-c9]{background-size:contain;width:50%;padding-top:50%}.big-key-icon[_ngcontent-c9]{background-image:url(https://z3rsim.com/assets/item-icons/bigKey.png)}.small-keys-icon[_ngcontent-c9]{background-image:url(https://z3rsim.com/assets/item-icons/smallKey.png);position:relative}.small-keys-text[_ngcontent-c9]{position:absolute;font-size:16px;top:5px;right:1px}.grayscale[_ngcontent-c9]{opacity:.5;filter:gray;-webkit-filter:grayscale(1);filter:grayscale(1)}.invisible[_ngcontent-c9]{visibility:hidden}@media (max-width:992px){.counter[_ngcontent-c9]{font-size:22px;bottom:4px;right:4px}.counter-smaller[_ngcontent-c9]{font-size:17px}}@media (max-width:768px){.counter[_ngcontent-c9]{font-size:10px;bottom:-4px;right:1px}.counter-smaller[_ngcontent-c9]{font-size:8px;right:0}.dungeon-chest[_ngcontent-c9]{font-size:10px}.big-key-icon[_ngcontent-c9], .small-keys-icon[_ngcontent-c9]{background-size:contain;width:100%;padding-top:100%}.dungeon-keys[_ngcontent-c9]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}.small-keys-text[_ngcontent-c9]{font-size:12px;top:2px;right:2px}.mm-medallion-text[_ngcontent-c9], .tr-medallion-text[_ngcontent-c9]{font-size:10px;font-weight:400}.mm-medallion-text[_ngcontent-c9]{top:10px}.tr-medallion-text[_ngcontent-c9]{top:0;right:0}}</style><style>.node[_ngcontent-c10]{position:absolute;cursor:pointer;z-index:2}.chest-count[_ngcontent-c10]{width:100%;text-align:right;font-size:12px;font-weight:700;position:absolute;bottom:-7px;right:-5px;color:#fff;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.warp[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/warp.png)}.tr-ledge[_ngcontent-c10], .warp[_ngcontent-c10]{background-size:cover;background-repeat:no-repeat}.tr-ledge[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/dungeon-tracker-icons/boss92.png)}.invisible[_ngcontent-c10]{display:none}.dungeon-unavailable[_ngcontent-c10], .unavailable[_ngcontent-c10], .unavailable-state[_ngcontent-c10]{background-color:#f08080}.dungeon[_ngcontent-c10], .dungeon-state[_ngcontent-c10]{background-color:blue}.open[_ngcontent-c10], .open-state[_ngcontent-c10]{background-color:#90ee90}.glitched-open[_ngcontent-c10], .glitched-state[_ngcontent-c10]{background-color:#00bfff}.dun-defeated[_ngcontent-c10], .dun-open-state[_ngcontent-c10], .dungeon-defeated[_ngcontent-c10]{background-color:#add8e6}.view[_ngcontent-c10], .view-state[_ngcontent-c10]{background-color:gold}.cleared[_ngcontent-c10], .defeated-boss[_ngcontent-c10], .dungeon-cleared[_ngcontent-c10], .dungeon-unavailable-cleared[_ngcontent-c10], .opened[_ngcontent-c10], .opened-state[_ngcontent-c10], .unavailable-open-state[_ngcontent-c10]{background-color:grey}.cleared[_ngcontent-c10], .dungeon-cleared[_ngcontent-c10], .dungeon-unavailable-cleared[_ngcontent-c10], .opened[_ngcontent-c10], .opened-state[_ngcontent-c10], .unavailable[_ngcontent-c10], .unavailable-open-state[_ngcontent-c10], .unavailable-state[_ngcontent-c10]{cursor:default}.dungeon-unavailable-cleared[_ngcontent-c10], .unavailable[_ngcontent-c10], .unavailable-open-state[_ngcontent-c10], .unavailable-state[_ngcontent-c10]{opacity:.5}.overworld-type[_ngcontent-c10]{width:5%;height:5%;margin:-2.5% -2.5%;border:solid #000;background-size:cover}.dungeon-type[_ngcontent-c10]{width:9%;height:9%;margin:-4.5% -4.5%;background-size:100%}.dungeon-type[_ngcontent-c10], .in-dungeon-type[_ngcontent-c10]{background-repeat:no-repeat;border:solid #000}.in-dungeon-type[_ngcontent-c10]{width:6%;height:6%;margin:-3% -3%;background-position:50%;background-size:cover}.icon-shown[_ngcontent-c10]{background-origin:content-box;padding:2px}.bk-door[_ngcontent-c10], .open-door[_ngcontent-c10], .sk-door[_ngcontent-c10]{width:9%;height:6%;margin:-3% -4.5%}.open-door[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/open_door.png)}.sk-door[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/key_door.png)}.bk-door[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/big_door.png)}.closed-chest[_ngcontent-c10], .open-chest[_ngcontent-c10]{width:6%;height:6%;margin:-3% -3%}.closed-chest[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/closed_chest.png)}.open-chest[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/open_chest.png)}.big-chest[_ngcontent-c10], .open-big-chest[_ngcontent-c10]{width:7.5%;height:6%;margin:-3% -3.75%}.big-chest[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/closed_big_chest.png)}.open-big-chest[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/open_big_chest.png)}.spare-key[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/small_key.png)}.blind[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/blind.png)}.switch-blue[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/switch_blue.png)}.switch-red[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/switch_red.png)}.water-switch-off[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/water_switch_off.png)}.water-switch-on[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/water_switch_on.png)}.tt-floor[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/tt_floor_closed.png)}.tt-floor-open[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/tt_floor_open.png)}.push-block[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/push-block.png)}.empty[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/empty.png)}.portal[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/warp.png)}.mirror[_ngcontent-c10]{border-radius:50%;background-image:url(https://z3rsim.com/assets/item-icons/mirror.png)}.frog[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/frog.png)}.purple-chest[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/purple-chest.png)}.big-bomb[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/big-bomb.png)}.tablet[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/tablet.png)}.pedestal[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/pedestal.png)}.hint-tile[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/hint_tile.png)}.big-hint-tile[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/item-icons/hintTile.png)}.sign[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/item-icons/sign.png)}.duck[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/duck.png)}.hole[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/hole.png)}.water-warp[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/water-warp.png)}.sq-item[_ngcontent-c10]{width:60%;margin-left:-30%;background-size:cover;background-color:#000}.lw-linkshouse[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/links_house.png)}.hc-sanctuary[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/sanctuary.png)}.lw-flute1[_ngcontent-c10]{background-image:url(https://z3rsim.com/assets/node-icons/mountain_cave.png)}.boss[_ngcontent-c10], .defeated-boss[_ngcontent-c10]{width:9%;height:9%;margin:-4.5% -4.5%}.invisible[_ngcontent-c10]{opacity:0}.faded[_ngcontent-c10]{display:none}@media (max-width:992px){.chest-count[_ngcontent-c10]{font-size:10px;right:-4px;bottom:-5px}}@media (max-width:768px){.dungeon-type[_ngcontent-c10], .in-dungeon-type[_ngcontent-c10], .overworld-type[_ngcontent-c10]{border:1.5px solid #000}.chest-count[_ngcontent-c10]{font-size:8px;right:-4px;bottom:-5px}}</style></head><body><app-root _nghost-c0="" ng-version="4.3.6"><nav _ngcontent-c0="" class="navbar navbar-inverse navbar-default">
+    <div _ngcontent-c0="" class="container-fluid">
+      
+      <div _ngcontent-c0="" class="navbar-header">
+        <button _ngcontent-c0="" aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+          <span _ngcontent-c0="" class="sr-only">Toggle navigation</span>
+          <span _ngcontent-c0="" class="icon-bar"></span>
+          <span _ngcontent-c0="" class="icon-bar"></span>
+          <span _ngcontent-c0="" class="icon-bar"></span>
+        </button>
+        <a _ngcontent-c0="" class="navbar-brand"><span _ngcontent-c0="" class="not-selectable title stylized-font">
+            Z3R Simulator <span _ngcontent-c0="" class="version-text">v4</span>
+          </span> </a>
+      </div>
+  
+      
+      <div _ngcontent-c0="" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul _ngcontent-c0="" class="nav navbar-nav">
+          <li _ngcontent-c0=""><a _ngcontent-c0="">Generate Seed</a></li>
+          <li _ngcontent-c0="">
+            <input type="file" id="spoiler-log-input" accept=".json,.txt" style="display: none;">
+            <a _ngcontent-c0="" type="button" onclick="document.getElementById('spoiler-log-input').click()">
+              <i _ngcontent-c0="" class="fa fa-upload"></i> Load Spoiler Log</a>
+          </li>
+        </ul>
+        <ul _ngcontent-c0="" class="nav navbar-nav navbar-right">
+          <li _ngcontent-c0=""><a _ngcontent-c0="" type="button">
+            <i _ngcontent-c0="" class="fa fa-sun-o"></i> Light Theme</a></li>
+          <li _ngcontent-c0=""><a _ngcontent-c0="">How To Play</a></li>
+          <li _ngcontent-c0=""><a _ngcontent-c0="">Changelog</a></li>
+          <li _ngcontent-c0=""><a _ngcontent-c0="">Support Us</a></li>
+          <li _ngcontent-c0=""><a _ngcontent-c0="">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div _ngcontent-c0="" class="whole-app">
+  <div _ngcontent-c0="" class="container">
+    
+
+    <li _ngcontent-c0="">
+            <input type="file" id="spoiler-log-input" accept=".json,.txt" style="display: none;">
+            <a _ngcontent-c0="" type="button" onclick="document.getElementById('spoiler-log-input').click()">
+              <i _ngcontent-c0="" class="fa fa-upload"></i> Load Spoiler Log</a>
+          </li>
+    <router-outlet _ngcontent-c0=""></router-outlet><app-game _nghost-c2=""><h1 _ngcontent-c2="" class="title"><small _ngcontent-c2="" class="hidden-xs">(Open) Seed: NLX5egBmJ85VX2Q</small></h1>
+<!---->
+<!----><div _ngcontent-c2="" class="container-fluid">
+  
+  <app-item-tracker _ngcontent-c2="" class="col-md-3 col-sm-4 col-xs-3 game-obj" _nghost-c3=""><div _ngcontent-c3="" class="container-fluid">
+  <div _ngcontent-c3="">
+    <!----><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node" style="background-image: url(&quot;./assets/item-icons/tunic1.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/sword.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/shield.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/moonPearl.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node" style="background-image: url(&quot;./assets/item-icons/health.png&quot;);">  
+  <!----><span _ngcontent-c9="" class="counter not-selectable outline-text">3</span>
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/bow.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/boomerang.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/hookshot.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/mushroom.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/powder.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/fireRod.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/iceRod.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/bombos.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!----><span _ngcontent-c9="" class="not-selectable outline-text mm-medallion-text invisible">MM</span>
+  <!----><span _ngcontent-c9="" class="not-selectable outline-text tr-medallion-text invisible">TR</span>
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/ether.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!----><span _ngcontent-c9="" class="not-selectable outline-text mm-medallion-text invisible">MM</span>
+  <!----><span _ngcontent-c9="" class="not-selectable outline-text tr-medallion-text invisible">TR</span>
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/quake.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!----><span _ngcontent-c9="" class="not-selectable outline-text mm-medallion-text invisible">MM</span>
+  <!----><span _ngcontent-c9="" class="not-selectable outline-text tr-medallion-text invisible">TR</span>
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/lamp.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/hammer.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/allflute.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/net.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/book.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/bottle.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/somaria.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/byrna.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/cape.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/mirror.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/boots.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/glove.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/flippers.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/halfMagic.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-5ths" _nghost-c9=""><!----><div _ngcontent-c9="" class="node off" style="background-image: url(&quot;./assets/item-icons/agahnim.png&quot;);">  
+  <!---->
+  <!---->
+</div>
+<!---->
+  <!---->
+<!----></app-tracker-node>
+  </div>
+</div>
+<div _ngcontent-c3="" class="container-fluid">
+  <div _ngcontent-c3="">
+    <!----><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss02.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials0.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest3.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss12.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials1.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest2.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss22.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials2.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest2.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss32.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials3.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest5.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss42.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials4.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest6.png&quot;);">
+    6
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss52.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials5.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest2.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss62.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials6.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest4.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss72.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials7.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest3.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss82.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials8.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest2.png&quot;);">
+    
+  </div>
+</div></app-tracker-node><app-tracker-node _ngcontent-c3="" class="col-xs-2 col-xs-5ths" _nghost-c9=""><!---->
+<!---->
+  <!---->
+<!----><div _ngcontent-c9="" class="dungeon-node">
+  <div _ngcontent-c9="">
+    <figure _ngcontent-c9="" class="dungeon-node-bg grayscale" style="background-image: url(&quot;./assets/dungeon-tracker-icons/boss92.png&quot;);">
+    </figure>
+    <div _ngcontent-c9="" class="dungeon-initials" style="background-image: url(&quot;./assets/dungeon-tracker-icons/initials9.png&quot;);">
+    </div>    
+    <div _ngcontent-c9="" class="dungeon-prize" style="background-image: url(&quot;./assets/dungeon-tracker-icons/dungeon0.png&quot;);">
+    </div>
+  </div>
+  <!---->
+  <div _ngcontent-c9="" class="dungeon-chest outline-text not-selectable" style="background-image: url(&quot;./assets/dungeon-tracker-icons/chest6.png&quot;);">
+    6
+  </div>
+</div></app-tracker-node>
+  </div>
+</div>
+<span _ngcontent-c3="" class="rupee-count">0 Rupees Collected</span>
+</app-item-tracker>
+  <app-map _ngcontent-c2="" class="col-md-6 col-sm-8 col-xs-9 game-obj" _nghost-c4=""><div _ngcontent-c4="" class="map" style="background-image: url(&quot;assets/light-world.png&quot;);">
+  <!----><div _ngcontent-c4="">
+    <!----><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 5%; top: 3.2%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 60%; top: 40.8%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x2
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 61.6%; top: 29.6%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 46.8%; top: 93.4%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x2
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 54.8%; top: 67.9%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 8%; top: 53.8%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x13
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 20%; top: 82.6%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 81.4%; top: 41.4%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x3
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 39%; top: 29.3%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 65.2%; top: 93.4%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x5
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 89.4%; top: 76.9%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 81.4%; top: 46.7%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 32%; top: 58%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 15.6%; top: 53%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type glitched-open" style="left: 70.8%; top: 69.7%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type glitched-open" style="left: 95.4%; top: 12.1%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type view" style="left: 30.2%; top: 7.6%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!----><i _ngcontent-c10="" aria-hidden="true" class="fa fa-search"></i>
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type view" style="left: 15.4%; top: 65.9%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!----><i _ngcontent-c10="" aria-hidden="true" class="fa fa-search"></i>
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 14.4%; top: 9.6%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x2
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 81.6%; top: 32.5%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 3.6%; top: 69.8%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!----><i _ngcontent-c10="" aria-hidden="true" class="fa fa-search"></i>
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type view" style="left: 3%; top: 89%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!----><i _ngcontent-c10="" aria-hidden="true" class="fa fa-search"></i>
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type view" style="left: 72.2%; top: 82.9%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!----><i _ngcontent-c10="" aria-hidden="true" class="fa fa-search"></i>
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type glitched-open" style="left: 95.4%; top: 17.3%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!----><i _ngcontent-c10="" aria-hidden="true" class="fa fa-search"></i>
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 28.8%; top: 66.2%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 90%; top: 19.3%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x2
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 46%; top: 28%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 53.6%; top: 32.4%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x3
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type open" style="left: 49.8%; top: 51%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x3
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type glitched-open" style="left: 49.8%; top: 45.8%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 41.6%; top: 20.4%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 51.6%; top: 14.8%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 42%; top: 3%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 50.8%; top: 8.5%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 82.8%; top: 17.1%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    x7
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 79.8%; top: 9.3%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type unavailable" style="left: 80.4%; top: 3%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 9%; top: 34%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 57.2%; top: 14.9%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 76.2%; top: 22.9%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 47%; top: 79%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 3.4%; top: 96%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 96.4%; top: 70%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 79.4%; top: 87%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 94%; top: 6%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node><app-node _ngcontent-c4="" nodetype="overworld" _nghost-c10=""><div _ngcontent-c10="" class="node overworld-type warp invisible" style="left: 49.8%; top: 59%;"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node> 
+    <!----><div _ngcontent-c4="">
+      <!----><app-node _ngcontent-c4="" nodetype="dungeon" _nghost-c10=""><div _ngcontent-c10="" class="node dungeon-type dungeon" style="left: 93.6%; top: 38.8%; background-image: url(&quot;./assets/dungeon-tracker-icons/boss02.png&quot;);"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node>
+    </div><div _ngcontent-c4="">
+      <!----><app-node _ngcontent-c4="" nodetype="dungeon" _nghost-c10=""><div _ngcontent-c10="" class="node dungeon-type unavailable" style="left: 7.6%; top: 78.4%; background-image: url(&quot;./assets/dungeon-tracker-icons/boss12.png&quot;);"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node>
+    </div><div _ngcontent-c4="">
+      <!----><app-node _ngcontent-c4="" nodetype="dungeon" _nghost-c10=""><div _ngcontent-c10="" class="node dungeon-type unavailable" style="left: 62%; top: 5.5%; background-image: url(&quot;./assets/dungeon-tracker-icons/boss22.png&quot;);"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node>
+    </div><div _ngcontent-c4="">
+      <!----><app-node _ngcontent-c4="" nodetype="dungeon" _nghost-c10=""><div _ngcontent-c10="" class="node dungeon-type unavailable" style="left: 49.6%; top: 39%; background-image: url(&quot;./assets/dungeon-tracker-icons/boss102.png&quot;);"> 
+  <div _ngcontent-c10="" class="chest-count outline-text">
+    
+    <!---->
+  </div>
+</div></app-node>
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div><div _ngcontent-c4="">
+      <!---->
+    </div>
+    
+  </div>
+  <!---->
+
+  <!---->
+</div>
+<div _ngcontent-c4="" class="map-footer">
+  <span _ngcontent-c4="">Light World</span>
+</div>
+<div _ngcontent-c4="" class="menu-buttons">
+  <!----><button _ngcontent-c4="" class="btn btn-danger">
+    Save &amp; Quit
+  </button>
+  <!---->
+  <!---->
+  <!----><button _ngcontent-c4="" class="btn btn-info">
+    Check <img _ngcontent-c4="" class="icon" src="map.png">
+  </button>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->  
+
+  <button _ngcontent-c4="" class="btn btn-danger aligned-right">
+    Report Seed
+  </button>
+</div>
+
+<!---->
+
+<!----></app-map>
+  <app-item-log _ngcontent-c2="" class="col-md-3 col-xs-12 game-obj" _nghost-c5=""><div _ngcontent-c5="" class="panel panel-info">
+  <div _ngcontent-c5="" class="panel-heading">
+    <button _ngcontent-c5="" btncheckbox="" class="btn btn-default ng-untouched ng-pristine ng-valid" name="showImportantButton" tooltip="Show Only Important Items" type="button"><i _ngcontent-c5="" aria-hidden="true" class="fa fa-filter">
+        </i><span _ngcontent-c5="" class="visible-xs-inline visible-sm-inline"> Filter Trash Items</span>
+    </button>
+    <input _ngcontent-c5="" class="form-control ng-untouched ng-pristine ng-valid" name="searchForm" placeholder="Search" type="text">
+    <!---->
+  </div>
+  <div _ngcontent-c5="" class="panel-body item-log-body">
+    <!---->
+  </div>
+</div></app-item-log>
+  <app-options _ngcontent-c2="" _nghost-c6="">
+</app-options>  
+  <app-game-menu _ngcontent-c2="" class="col-sm-6 game-obj" _nghost-c7=""><p _ngcontent-c7="">
+</p>
+</app-game-menu>
+  
+</div>
+<!---->
+
+<!----></app-game>
+  </div>    
+  <footer _ngcontent-c0="">
+    <p _ngcontent-c0="">
+      Join our <a _ngcontent-c0="" href="https://discord.gg/nPJpFQB" target="_blank">Z3RSim Discord</a>
+    </p>
+    <p _ngcontent-c0="">      
+      Developed by Kyong92 - 
+        <a _ngcontent-c0="" href="https://www.twitch.tv/kyong92" target="_blank">
+          <img _ngcontent-c0="" src="twitch_glitch_icon.png">
+        </a> - 
+        <a _ngcontent-c0="" href="https://twitter.com/kyong92" target="_blank">
+          <i _ngcontent-c0="" aria-hidden="true" class="fa fa-twitter"></i>
+        </a>
+    </p>    
+  </footer>
+</div>
+
+<!----></app-root>
+<script type="text/javascript" src="inline.8be243550ae3cd874881.bundle.js"></script>
+<script type="text/javascript" src="polyfills.e537f46fa8e8afb44827.bundle.js"></script>
+<script type="text/javascript" src="vendor.0b1c9e6c36fce18a1513.bundle.js"></script>
+<script type="text/javascript" src="main.c8df59dcefef6190165d.bundle.js"></script>
+
+<!-- Z3R Item Array Generator Scripts -->
+<script src="src/generateItemArray.js"></script>
+<script src="src/generateSeedMetadataPrefix.js"></script>
+<script src="src/spoilerLogAdapter.js"></script>
+
+<script>
+// Function to add Load Spoiler Log button to navbar
+function addSpoilerLogButtonToNavbar() {
+    // Check if button already exists in navbar
+    const existingButton = document.getElementById('spoiler-log-input-navbar');
+    if (existingButton) {
+        return; // Button already exists
+    }
+
+    // Find the navbar navigation list
+    const navbarNav = document.querySelector('.navbar .nav.navbar-nav');
+    if (!navbarNav) {
+        return; // Navbar not found yet
+    }
+
+    // Remove the "Generate Seed" button (first list item)
+    const firstItem = navbarNav.querySelector('li:first-child');
+    if (firstItem) {
+        firstItem.remove();
+    }
+
+    // Create the list item with button
+    const li = document.createElement('li');
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'file';
+    hiddenInput.id = 'spoiler-log-input-navbar';
+    hiddenInput.accept = '.json,.txt';
+    hiddenInput.style.display = 'none';
+
+    const button = document.createElement('a');
+    button.type = 'button';
+    button.onclick = function() { document.getElementById('spoiler-log-input-navbar').click(); };
+    button.innerHTML = '<i class="fa fa-upload"></i> Load Spoiler Log';
+
+    li.appendChild(hiddenInput);
+    li.appendChild(button);
+
+    // Add as the first item in the navbar
+    if (navbarNav.firstChild) {
+        navbarNav.insertBefore(li, navbarNav.firstChild);
+    } else {
+        navbarNav.appendChild(li);
+    }
+}
+
+function addFileBehavior() {
+      document.getElementById('spoiler-log-input-navbar').addEventListener('change', async function(event) {
+      const file = event.target.files[0];
+      if (file) {
+          try {
+            console.log('📁 Loading spoiler log file:', file.name);
+
+            const text = await file.text();
+            const spoilerLogData = JSON.parse(text);
+
+            // Save to localStorage
+            window.saveSpoilerLogToLocalStorage(spoilerLogData);
+
+            // Generate item array and log results
+            const itemArray = await window.loadAndGenerateItemArray();
+
+            console.log('✅ Spoiler log loaded and item array generated successfully!');
+            console.log('💾 Item array available as:', itemArray);
+
+            localStorage.setItem("itemArray", itemArray?.join(""))
+            // You can now use the itemArray in your application
+            // For example: window.currentItemArray = itemArray;
+
+          } catch (error) {
+            console.error('❌ Error loading spoiler log:', error);
+            alert('Error loading spoiler log file. Please check the console for details.');
+          }
+        }
+      });
+    }
+
+// Try to add button immediately, then retry with timeout for Angular
+document.addEventListener('DOMContentLoaded', function() {
+    localStorage.removeItem("itemArray")
+    addSpoilerLogButtonToNavbar();
+
+    // Retry after a short delay to ensure Angular has loaded
+    setTimeout(addSpoilerLogButtonToNavbar, 100);
+    setTimeout(addSpoilerLogButtonToNavbar, 500);
+    setTimeout(addSpoilerLogButtonToNavbar, 1000);
+
+    
+    // Handle spoiler log file upload
+    setTimeout(addFileBehavior, 1100);
+
+});
+
+
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎮 Z3R Simulator with Item Array Generator loaded');
+
+    // Check if we have a spoiler log in localStorage
+    if (window.hasSpoilerLogInLocalStorage()) {
+        console.log('📱 Found existing spoiler log in localStorage');
+        // Optionally auto-generate item array on load
+        // window.loadAndGenerateItemArray();
+    } else {
+        console.log('ℹ️  No spoiler log in localStorage. Click "Load Spoiler Log" to upload one.');
+    }
+});
+</script>
+</body>
+</html>

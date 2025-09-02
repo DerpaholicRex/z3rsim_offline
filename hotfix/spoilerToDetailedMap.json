@@ -1,0 +1,906 @@
+{
+  "Master Sword Pedestal": {
+    "detailedMapName": "Pedestal",
+    "detailedMapValue": 0
+  },
+  "Link's Uncle": {
+    "detailedMapName": "Link's Uncle",
+    "detailedMapValue": 1
+  },
+  "Secret Passage": {
+    "detailedMapName": "Secret Passage Chest",
+    "detailedMapValue": 2
+  },
+  "King's Tomb": {
+    "detailedMapName": "King's Tomb Chest",
+    "detailedMapValue": 3
+  },
+  "Floodgate Chest": {
+    "detailedMapName": "Dam Chest",
+    "detailedMapValue": 4
+  },
+  "Link's House": {
+    "detailedMapName": "Link's House Chest",
+    "detailedMapValue": 5
+  },
+  "Kakariko Tavern": {
+    "detailedMapName": "Tavern Chest",
+    "detailedMapValue": 6
+  },
+  "Chicken House": {
+    "detailedMapName": "Chicken House Chest",
+    "detailedMapValue": 7
+  },
+  "Aginah's Cave": {
+    "detailedMapName": "Aginah",
+    "detailedMapValue": 8
+  },
+  "Sahasrahla's Hut - Left": {
+    "detailedMapName": "Sahasrahala's Hut Left  Chest",
+    "detailedMapValue": 9
+  },
+  "Sahasrahla's Hut - Middle": {
+    "detailedMapName": "Sahasrahala's Hut Middle Chest",
+    "detailedMapValue": 10
+  },
+  "Sahasrahla's Hut - Right": {
+    "detailedMapName": "Sahasrahala's Hut Right Chest",
+    "detailedMapValue": 11
+  },
+  "Kakariko Well - Top": {
+    "detailedMapName": "Kakariko Well Chest 1",
+    "detailedMapValue": 12
+  },
+  "Kakariko Well - Left": {
+    "detailedMapName": "Kakariko Well Chest 2",
+    "detailedMapValue": 13
+  },
+  "Kakariko Well - Middle": {
+    "detailedMapName": "Kakariko Well Chest 3",
+    "detailedMapValue": 14
+  },
+  "Kakariko Well - Right": {
+    "detailedMapName": "Kakariko Well Chest 4",
+    "detailedMapValue": 15
+  },
+  "Kakariko Well - Bottom": {
+    "detailedMapName": "Kakariko Well Chest 5",
+    "detailedMapValue": 16
+  },
+  "Blind's Hideout - Top": {
+    "detailedMapName": "Blind' Hut Chest 1",
+    "detailedMapValue": 17
+  },
+  "Blind's Hideout - Left": {
+    "detailedMapName": "Blind' Hut Chest 2",
+    "detailedMapValue": 18
+  },
+  "Blind's Hideout - Right": {
+    "detailedMapName": "Blind' Hut Chest 3",
+    "detailedMapValue": 19
+  },
+  "Blind's Hideout - Far Left": {
+    "detailedMapName": "Blind' Hut Chest 4",
+    "detailedMapValue": 20
+  },
+  "Blind's Hideout - Far Right": {
+    "detailedMapName": "Blind' Hut Chest 5",
+    "detailedMapValue": 21
+  },
+  "Pegasus Rocks": {
+    "detailedMapName": "Bonk Rocks",
+    "detailedMapValue": 22
+  },
+  "Mini Moldorm Cave - Far Left": {
+    "detailedMapName": "Mini Moldorm Cave Far Left Chest",
+    "detailedMapValue": 23
+  },
+  "Mini Moldorm Cave - Left": {
+    "detailedMapName": "Mini Moldorm Cave Left Chest",
+    "detailedMapValue": 24
+  },
+  "Mini Moldorm Cave - Right": {
+    "detailedMapName": "Mini Moldorm Cave Right Chest",
+    "detailedMapValue": 25
+  },
+  "Mini Moldorm Cave - Far Right": {
+    "detailedMapName": "Mini Moldorm Cave Far Right Chest",
+    "detailedMapValue": 26
+  },
+  "Ice Rod Cave": {
+    "detailedMapName": "Ice Rod Chest",
+    "detailedMapValue": 27
+  },
+  "Bottle Merchant": {
+    "detailedMapName": "Bottle Vendor",
+    "detailedMapValue": 28
+  },
+  "Sahasrahla": {
+    "detailedMapName": "Sahasrahala",
+    "detailedMapValue": 29
+  },
+  "Magic Bat": {
+    "detailedMapName": "Magic Bat",
+    "detailedMapValue": 30
+  },
+  "Sick Kid": {
+    "detailedMapName": "Sick Kid",
+    "detailedMapValue": 31
+  },
+  "Hobo": {
+    "detailedMapName": "Hobo",
+    "detailedMapValue": 32
+  },
+  "Bombos Tablet": {
+    "detailedMapName": "Bombos Tablet",
+    "detailedMapValue": 33
+  },
+  "King Zora": {
+    "detailedMapName": "King Zora",
+    "detailedMapValue": 34
+  },
+  "Lost Woods Hideout": {
+    "detailedMapName": "Lost Woods Hideout Chest",
+    "detailedMapValue": 35
+  },
+  "Lumberjack Tree": {
+    "detailedMapName": "Lumberjack Item",
+    "detailedMapValue": 36
+  },
+  "Cave 45": {
+    "detailedMapName": "South Grove Chest",
+    "detailedMapValue": 37
+  },
+  "Graveyard Ledge": {
+    "detailedMapName": "Graveyard Ledge Chest",
+    "detailedMapValue": 38
+  },
+  "Checkerboard Cave": {
+    "detailedMapName": "Checkerboard Item",
+    "detailedMapValue": 39
+  },
+  "Mini Moldorm Cave - NPC": {
+    "detailedMapName": "Mini Moldorm Cave NPC",
+    "detailedMapValue": 40
+  },
+  "Library": {
+    "detailedMapName": "Library Item",
+    "detailedMapValue": 41
+  },
+  "Mushroom": {
+    "detailedMapName": "Mushroom Item",
+    "detailedMapValue": 42
+  },
+  "Potion Shop": {
+    "detailedMapName": "Potion Shop Item",
+    "detailedMapValue": 43
+  },
+  "Maze Race": {
+    "detailedMapName": "Race Game Prize",
+    "detailedMapValue": 44
+  },
+  "Desert Ledge": {
+    "detailedMapName": "Desert Ledge Item",
+    "detailedMapValue": 45
+  },
+  "Lake Hylia Island": {
+    "detailedMapName": "Lake Hylea Island",
+    "detailedMapValue": 46
+  },
+  "Sunken Treasure": {
+    "detailedMapName": "Sunken Chest",
+    "detailedMapValue": 47
+  },
+  "Zora's Ledge": {
+    "detailedMapName": "Zora River Ledge",
+    "detailedMapValue": 48
+  },
+  "Flute Spot": {
+    "detailedMapName": "Shovel Item",
+    "detailedMapValue": 49
+  },
+  "Waterfall Fairy - Left": {
+    "detailedMapName": "Waterfall Fairy Left Chest",
+    "detailedMapValue": 50
+  },
+  "Waterfall Fairy - Right": {
+    "detailedMapName": "Waterfall Fairy Right Chest",
+    "detailedMapValue": 51
+  },
+  "Sanctuary": {
+    "detailedMapName": "Sanctuary Chest",
+    "detailedMapValue": 52
+  },
+  "Sewers - Secret Room - Left": {
+    "detailedMapName": "Bombable Wall Chest 1",
+    "detailedMapValue": 53
+  },
+  "Sewers - Secret Room - Middle": {
+    "detailedMapName": "Bombable Wall Chest 2",
+    "detailedMapValue": 54
+  },
+  "Sewers - Secret Room - Right": {
+    "detailedMapName": "Bombable Wall Chest 3",
+    "detailedMapValue": 55
+  },
+  "Hyrule Castle - Boomerang Chest": {
+    "detailedMapName": "Boomerang Chest",
+    "detailedMapValue": 57
+  },
+  "Sewers - Dark Cross": {
+    "detailedMapName": "Boomerang Chest key" ,
+    "detailedMapValue": 56
+  },
+  "Hyrule Castle - Map Chest": {
+    "detailedMapName": "HC Map Chest",
+    "detailedMapValue": 58
+  },
+  "Hyrule Castle - Zelda's Cell": {
+    "detailedMapName": "Zelda's Chest",
+    "detailedMapValue": 59
+  },
+  "Eastern Palace - Big Chest": {
+    "detailedMapName": "Ep Big Chest",
+    "detailedMapValue": 61
+  },
+  "Eastern Palace - Cannonball Chest": {
+    "detailedMapName": "Cannonball Chest",
+    "detailedMapValue": 62
+  },
+  "Eastern Palace - Big Key Chest": {
+    "detailedMapName": "Ep Big Key Chest",
+    "detailedMapValue": 63
+  },
+  "Eastern Palace - Map Chest": {
+    "detailedMapName": "Ep Map Room Chest",
+    "detailedMapValue": 64
+  },
+  "Eastern Palace - Boss": {
+    "detailedMapName": "Armos Knights",
+    "detailedMapValue": 65
+  },
+  "Eastern Palace - Prize": {
+    "detailedMapName": "Eastern Palace",
+    "detailedMapValue": 66
+  },
+  "Desert Palace - Big Chest": {
+    "detailedMapName": "DP Big Chest",
+    "detailedMapValue": 67
+  },
+  "Desert Palace - Map Chest": {
+    "detailedMapName": "DP Map Chest Item",
+    "detailedMapValue": 68
+   },
+  "Desert Palace - Torch": {
+    "detailedMapName": "DP Torch Item",
+    "detailedMapValue": 69
+  },
+  "Desert Palace - Big Key Chest": {
+    "detailedMapName": "DP Big Key Chest",
+    "detailedMapValue": 70
+  },
+  "Desert Palace - Boss": {
+    "detailedMapName": "Lanmolas",
+    "detailedMapValue": 72
+  },
+  "Desert Palace - Prize": {
+    "detailedMapName": "Desert Palace",
+    "detailedMapValue": 73
+  },
+  "Old Man": {
+    "detailedMapName": "Old Man",
+    "detailedMapValue": 74
+  },
+  "Spectacle Rock Cave": {
+    "detailedMapName": "Spectacle Rock Cave Item",
+    "detailedMapValue": 75
+  },
+  "Ether Tablet": {
+    "detailedMapName": "Ether Tablet",
+    "detailedMapValue": 76
+  },
+  "Spectacle Rock": {
+    "detailedMapName": "Spectacle Rock Item",
+    "detailedMapValue": 77
+  },
+  "Spiral Cave": {
+    "detailedMapName": "Spiral Cave Chest",
+    "detailedMapValue": 78
+  },
+  "Mimic Cave": {
+    "detailedMapName": "Mimic Cave Chest",
+    "detailedMapValue": 79
+  },
+  "Paradox Cave Lower - Far Left": {
+    "detailedMapName": "Paradox Cave Lower - Chest 1",
+    "detailedMapValue": 80
+  },
+  "Paradox Cave Lower - Middle": {
+    "detailedMapName": "Paradox Cave Lower - Chest 2",
+    "detailedMapValue": 81
+  },
+  "Paradox Cave Lower - Left": {
+    "detailedMapName": "Paradox Cave Lower - Chest 3",
+    "detailedMapValue": 82
+  },
+  "Paradox Cave Lower - Right": {
+    "detailedMapName": "Paradox Cave Lower - Chest 4",
+    "detailedMapValue": 83
+  },
+  "Paradox Cave Lower - Far Right": {
+    "detailedMapName": "Paradox Cave Lower - Chest 5",
+    "detailedMapValue": 84
+  },
+  "Paradox Cave Upper - Left": {
+    "detailedMapName": "Paradox Cave Upper - Left Chest",
+    "detailedMapValue": 85
+  },
+  "Paradox Cave Upper - Right": {
+    "detailedMapName": "Paradox Cave Upper - Right Chest",
+    "detailedMapValue": 86
+  },
+  "Floating Island": {
+    "detailedMapName": "Floating Island",
+    "detailedMapValue": 87
+  },
+  "Tower of Hera - Big Key Chest": {
+    "detailedMapName": "Toh Big Key Chest",
+    "detailedMapValue": 88
+  },
+  "Tower of Hera - Basement Cage": {
+    "detailedMapName": "Basement Cage Item",
+    "detailedMapValue": 89
+  },
+  "Tower of Hera - Map Chest": {
+    "detailedMapName": "Toh Map Chest",
+    "detailedMapValue": 90
+  },
+  "Tower of Hera - Compass Chest": {
+    "detailedMapName": "Toh Compass Chest",
+    "detailedMapValue": 91
+  },
+  "Tower of Hera - Big Chest": {
+    "detailedMapName": "Toh Big Chest",
+    "detailedMapValue": 92
+  },
+  "Tower of Hera - Boss": {
+    "detailedMapName": "Moldorm",
+    "detailedMapValue": 93
+  },
+  "Tower of Hera - Prize": {
+    "detailedMapName": "Tower of Hera",
+    "detailedMapValue": 94
+  },
+  "Castle Tower - Room 03": {
+    "detailedMapName": "Aga Tower First Chest",
+    "detailedMapValue": 95
+  },
+  "Castle Tower - Dark Maze": {
+    "detailedMapName": "Aga Tower Dark Chest",
+    "detailedMapValue": 96
+  },
+  "Superbunny Cave - Top": {
+    "detailedMapName": "Superbunny Chest 1",
+    "detailedMapValue": 97
+  },
+  "Superbunny Cave - Bottom": {
+    "detailedMapName": "Superbunny Chest 2",
+    "detailedMapValue": 98
+  },
+  "Hookshot Cave - Top Right": {
+    "detailedMapName": "Hookshot Cave Top Chest 1",
+    "detailedMapValue": 100
+  },
+  "Hookshot Cave - Top Left": {
+    "detailedMapName": "Hookshot Cave Top Chest 2",
+    "detailedMapValue": 101
+  },
+  "Hookshot Cave - Bottom Left": {
+    "detailedMapName": "Hookshot Cave Top Chest 3",
+    "detailedMapValue": 99
+  },
+  "Hookshot Cave - Bottom Right": {
+    "detailedMapName": "Hookshot Cave Bottom Chest",
+    "detailedMapValue": 102
+  },
+  "Spike Cave": {
+    "detailedMapName": "Spike Cave Chest",
+    "detailedMapValue": 103
+  },
+  "Catfish": {
+    "detailedMapName": "Catfish",
+    "detailedMapValue": 104
+  },
+  "Pyramid": {
+    "detailedMapName": "Pyramid Item",
+    "detailedMapValue": 105
+  },
+  "Pyramid Fairy - Left": {
+    "detailedMapName": "Pyramid Fairy Chest 1",
+    "detailedMapValue": 106
+  },
+  "Pyramid Fairy - Right": {
+    "detailedMapName": "Pyramid Fairy Chest 2",
+    "detailedMapValue": 107
+  },
+  "Brewery": {
+    "detailedMapName": "Bombable Hut Chest",
+    "detailedMapValue": 108
+  },
+  "C-Shaped House": {
+    "detailedMapName": "C-House Chest",
+    "detailedMapValue": 109
+  },
+  "Chest Game": {
+    "detailedMapName": "Chest Game Prize",
+    "detailedMapValue": 110
+  },
+  "Hammer Pegs": {
+    "detailedMapName": "Hammer Pegs Item",
+    "detailedMapValue": 111
+  },
+  "Bumper Cave": {
+    "detailedMapName": "Bumper Cave Item",
+    "detailedMapValue": 112
+  },
+  "Blacksmith": {
+    "detailedMapName": "Blacksmiths Item",
+    "detailedMapValue": 113
+  },
+  "Purple Chest": {
+    "detailedMapName": "Deliver Purple Chest",
+    "detailedMapValue": 114
+  },
+  "Hype Cave - Top": {
+    "detailedMapName": "Hype Cave Chest 1",
+    "detailedMapValue": 115
+  },
+  "Hype Cave - Middle Right": {
+    "detailedMapName": "Hype Cave Chest 2",
+    "detailedMapValue": 116
+  },
+  "Hype Cave - Middle Left": {
+    "detailedMapName": "Hype Cave Chest 3",
+    "detailedMapValue": 117
+  },
+  "Hype Cave - Bottom": {
+    "detailedMapName": "Hype Cave Chest 4",
+    "detailedMapValue": 118
+  },
+  "Stumpy": {
+    "detailedMapName": "Ol' Stumpy",
+    "detailedMapValue": 119
+  },
+  "Hype Cave - NPC": {
+    "detailedMapName": "Hype Cave Chest 5",
+    "detailedMapValue": 120
+  },
+  "Digging Game": {
+    "detailedMapName": "Digging Game Prize",
+    "detailedMapValue": 121
+  },
+  "Mire Shed - Left": {
+    "detailedMapName": "Mire Shed Chest 1",
+    "detailedMapValue": 122
+  },
+  "Mire Shed - Right": {
+    "detailedMapName": "Mire Shed Chest 2",
+    "detailedMapValue": 123
+  },
+  "Palace of Darkness - Shooter Room": {
+    "detailedMapName": "Shooter Room Chest",
+    "detailedMapValue": 124
+  },
+  "Palace of Darkness - Big Key Chest": {
+    "detailedMapName": "Pod Big Key Chest",
+    "detailedMapValue": 125
+  },
+  "Palace of Darkness - The Arena - Ledge": {
+    "detailedMapName": "Arena Ledge Chest",
+    "detailedMapValue": 126
+  },
+  "Palace of Darkness - The Arena - Bridge": {
+    "detailedMapName": "Arena Bridge Chest",
+    "detailedMapValue": 127
+  },
+  "Palace of Darkness - Stalfos Basement": {
+    "detailedMapName": "Stalfos Basement Chest",
+    "detailedMapValue": 128
+  },
+  "Palace of Darkness - Map Chest": {
+    "detailedMapName": "Pod Map Chest",
+    "detailedMapValue": 129
+  },
+  "Palace of Darkness - Big Chest": {
+    "detailedMapName": "Pod Big Chest",
+    "detailedMapValue": 130
+  },
+  "Palace of Darkness - Harmless Hellway": {
+    "detailedMapName": "Harmless Hallway Chest",
+    "detailedMapValue": 132
+  },
+  "Palace of Darkness - Dark Basement - Left": {
+    "detailedMapName": "Dark Basement Left Chest",
+    "detailedMapValue": 133
+  },
+  "Palace of Darkness - Dark Basement - Right": {
+    "detailedMapName": "Dark Basement Right Chest",
+    "detailedMapValue": 134
+  },
+  "Palace of Darkness - Dark Maze - Top": {
+    "detailedMapName": "Dark Maze Top Chest",
+    "detailedMapValue": 135
+  },
+  "Palace of Darkness - Dark Maze - Bottom": {
+    "detailedMapName": "Dark Maze Bottom Chest",
+    "detailedMapValue": 136
+  },
+  "Palace of Darkness - Boss": {
+    "detailedMapName": "Helmasaur King",
+    "detailedMapValue": 137
+  },
+  "Palace of Darkness - Prize": {
+    "detailedMapName": "Palace of Darkness",
+    "detailedMapValue": 138
+  },
+  "Swamp Palace - Entrance": {
+    "detailedMapName": "Entrance Chest",
+    "detailedMapValue": 139
+  },
+  "Swamp Palace - Big Chest": {
+    "detailedMapName": "Sp Big Chest",
+    "detailedMapValue": 140
+  },
+  "Swamp Palace - Big Key Chest": {
+    "detailedMapName": "Sp Big Key Chest",
+    "detailedMapValue": 141
+  },
+  "Swamp Palace - Map Chest": {
+    "detailedMapName": "Sp Map Chest",
+    "detailedMapValue": 142
+  },
+  "Swamp Palace - West Chest": {
+    "detailedMapName": "Left Side Chest",
+    "detailedMapValue": 143
+  },
+  "Eastern Palace - Compass Chest": {
+    "detailedMapName": "Ep Compass Chest",
+    "detailedMapValue": 60
+  },
+  "Desert Palace - Compass Chest": {
+    "detailedMapName": "Compass Chest",
+    "detailedMapValue": 71
+  },
+  "Palace of Darkness - Compass Chest": {
+    "detailedMapName": "Compass Chest",
+    "detailedMapValue": 131
+  },
+  "Swamp Palace - Compass Chest": {
+    "detailedMapName": "Compass Chest",
+    "detailedMapValue": 144
+  },
+  "Skull Woods - Compass Chest": {
+    "detailedMapName": "Compass Chest",
+    "detailedMapValue": 152
+  },
+  "Ice Palace - Compass Chest": {
+    "detailedMapName": "Compass Chest",
+    "detailedMapValue": 169
+  },
+  "Swamp Palace - Flooded Room - Left": {
+    "detailedMapName": "Flooded Room Left Chest",
+    "detailedMapValue": 145
+  },
+  "Swamp Palace - Flooded Room - Right": {
+    "detailedMapName": "Flooded Room Right Chest",
+    "detailedMapValue": 146
+  },
+  "Swamp Palace - Waterfall Room": {
+    "detailedMapName": "Hidden Waterfall Chest",
+    "detailedMapValue": 147
+  },
+  "Swamp Palace - Boss": {
+    "detailedMapName": "Arrghus",
+    "detailedMapValue": 148
+  },
+  "Swamp Palace - Prize": {
+    "detailedMapName": "Swamp Palace",
+    "detailedMapValue": 149
+  },
+  "Skull Woods - Big Chest": {
+    "detailedMapName": "Sw Big Chest",
+    "detailedMapValue": 150
+  },
+  "Skull Woods - Big Key Chest": {
+    "detailedMapName": "Sw Big Key Chest",
+    "detailedMapValue": 151
+  },
+  "Skull Woods - Map Chest": {
+    "detailedMapName": "Sw Map Chest",
+    "detailedMapValue": 153
+  },
+  "Skull Woods - Bridge Room": {
+    "detailedMapName": "Bridge Room Chest",
+    "detailedMapValue": 154
+  },
+  "Skull Woods - Pot Prison": {
+    "detailedMapName": "Pot Prison Chest",
+    "detailedMapValue": 155
+  },
+  "Skull Woods - Pinball Room": {
+    "detailedMapName": "Pinball Chest",
+    "detailedMapValue": 156
+  },
+  "Skull Woods - Boss": {
+    "detailedMapName": "Mothula",
+    "detailedMapValue": 157
+  },
+  "Skull Woods - Prize": {
+    "detailedMapName": "Skull Wood",
+    "detailedMapValue": 158
+  },
+  "Thieves' Town - Attic": {
+    "detailedMapName": "Attic Chest",
+    "detailedMapValue": 159
+  },
+  "Thieves' Town - Big Key Chest": {
+    "detailedMapName": "Tt Big Key Chest",
+    "detailedMapValue": 160
+  },
+  "Thieves' Town - Map Chest": {
+    "detailedMapName": "Tt Map Chest",
+    "detailedMapValue": 161
+  },
+  "Thieves' Town - Compass Chest": {
+    "detailedMapName": "Tt Compass Chest",
+    "detailedMapValue": 162
+  },
+  "Thieves' Town - Ambush Chest": {
+    "detailedMapName": "TT Ambush Chest",
+    "detailedMapValue": 163
+  },
+  "Thieves' Town - Big Chest": {
+    "detailedMapName": "Tt Big Chest",
+    "detailedMapValue": 164
+  },
+  "Thieves' Town - Blind's Cell": {
+    "detailedMapName": "Blind's Chest",
+    "detailedMapValue": 165
+  },
+  "Thieves' Town - Boss": {
+    "detailedMapName": "Blind",
+    "detailedMapValue": 166
+  },
+  "Thieves' Town - Prize": {
+    "detailedMapName": "Thieve's Town",
+    "detailedMapValue": 167
+  },
+  "Ice Palace - Big Key Chest": {
+    "detailedMapName": "Ip Big Key Chest",
+    "detailedMapValue": 168
+  },
+  "Ice Palace - Map Chest": {
+    "detailedMapName": "Ip Map Chest",
+    "detailedMapValue": 170
+  },
+  "Ice Palace - Spike Room": {
+    "detailedMapName": "Ip Spike Room Chest",
+    "detailedMapValue": 171
+  },
+  "Ice Palace - Freezor Chest": {
+    "detailedMapName": "Freezor Chest",
+    "detailedMapValue": 172
+  },
+  "Ice Palace - Iced T Room": {
+    "detailedMapName": "Iced T Chest",
+    "detailedMapValue": 173
+  },
+  "Ice Palace - Big Chest": {
+    "detailedMapName": "Ice Palace Big Chest",
+    "detailedMapValue": 174
+  },
+  "Ice Palace - Boss": {
+    "detailedMapName": "Kholdstare",
+    "detailedMapValue": 175
+  },
+  "Ice Palace - Prize": {
+    "detailedMapName": "Ice Palace",
+    "detailedMapValue": 176
+  },
+  "Misery Mire - Big Chest": {
+    "detailedMapName": "Mm Big Chest",
+    "detailedMapValue": 177
+  },
+  "Misery Mire - Main Lobby": {
+    "detailedMapName": "Main Lobby Chest",
+    "detailedMapValue": 178
+  },
+  "Misery Mire - Big Key Chest": {
+    "detailedMapName": "MM Big Key Chest",
+    "detailedMapValue": 179
+  },
+  "Misery Mire - Compass Chest": {
+    "detailedMapName": "Mm Compass Chest",
+    "detailedMapValue": 180
+  },
+  "Misery Mire - Bridge Chest": {
+    "detailedMapName": "two bridge Mm Map Chest",
+    "detailedMapValue": 181
+  },
+  "Misery Mire - Map Chest": {
+    "detailedMapName": "mm Map Chest",
+    "detailedMapValue": 182
+  },
+  "Misery Mire - Spike Chest": {
+    "detailedMapName": "Mm Spike Room Chest",
+    "detailedMapValue": 183
+  },
+  "Misery Mire - Boss": {
+    "detailedMapName": "Vitreous",
+    "detailedMapValue": 184
+  },
+  "Misery Mire - Prize": {
+    "detailedMapName": "Misery Mire",
+    "detailedMapValue": 185
+  },
+  "Turtle Rock - Chain Chomps": {
+    "detailedMapName": "Chain Chomps Chest",
+    "detailedMapValue": 186
+  },
+  "Turtle Rock - Compass Chest": {
+    "detailedMapName": "Tr Compass Chest",
+    "detailedMapValue": 187
+  },
+  "Turtle Rock - Roller Room - Left": {
+    "detailedMapName": "Roller Room Left Chest",
+    "detailedMapValue": 188
+  },
+  "Turtle Rock - Roller Room - Right": {
+    "detailedMapName": "Roller Room Right Chest",
+    "detailedMapValue": 189
+  },
+  "Turtle Rock - Big Chest": {
+    "detailedMapName": "Tr Big Chest",
+    "detailedMapValue": 190
+  },
+  "Turtle Rock - Big Key Chest": {
+    "detailedMapName": "Tr Big Key Chest",
+    "detailedMapValue": 191
+  },
+  "Turtle Rock - Crystaroller Room": {
+    "detailedMapName": "Crystaroller Chest",
+    "detailedMapValue": 192
+  },
+  "Turtle Rock - Eye Bridge - Bottom Left": {
+    "detailedMapName": "Laser Bridge Chest 4",
+    "detailedMapValue": 193
+  },
+  "Turtle Rock - Eye Bridge - Bottom Right": {
+    "detailedMapName": "Laser Bridge Chest 3",
+    "detailedMapValue": 194
+  },
+  "Turtle Rock - Eye Bridge - Top Left": {
+    "detailedMapName": "Laser Bridge Chest 2",
+    "detailedMapValue": 195
+  },
+  "Turtle Rock - Eye Bridge - Top Right": {
+    "detailedMapName": "Laser Bridge Chest 1",
+    "detailedMapValue": 196
+  },
+  "Turtle Rock - Boss": {
+    "detailedMapName": "Trinexx",
+    "detailedMapValue": 197
+  },
+  "Turtle Rock - Prize": {
+    "detailedMapName": "Turtle Rock",
+    "detailedMapValue": 198
+  },
+  "Ganon's Tower - Bob's Torch": {
+    "detailedMapName": "Bob's Torch Item",
+    "detailedMapValue": 199
+  },
+  "Ganon's Tower - DMs Room - Top Left": {
+    "detailedMapName": "Stalfos Room Chest 1",
+    "detailedMapValue": 200
+  },
+  "Ganon's Tower - DMs Room - Top Right": {
+    "detailedMapName": "Stalfos Room Chest 2",
+    "detailedMapValue": 201
+  },
+  "Ganon's Tower - DMs Room - Bottom Left": {
+    "detailedMapName": "Stalfos Room Chest 3",
+    "detailedMapValue": 202
+  },
+  "Ganon's Tower - DMs Room - Bottom Right": {
+    "detailedMapName": "Stalfos Room Chest 4",
+    "detailedMapValue": 203
+  },
+  "Ganon's Tower - Randomizer Room - Top Left": {
+    "detailedMapName": "Rando Room Chest 1",
+    "detailedMapValue": 204
+  },
+  "Ganon's Tower - Randomizer Room - Top Right": {
+    "detailedMapName": "Rando Room Chest 2",
+    "detailedMapValue": 205
+  },
+  "Ganon's Tower - Randomizer Room - Bottom Left": {
+    "detailedMapName": "Rando Room Chest 3",
+    "detailedMapValue": 206
+  },
+  "Ganon's Tower - Randomizer Room - Bottom Right": {
+    "detailedMapName": "Rando Room Chest 4",
+    "detailedMapValue": 207
+  },
+  "Ganon's Tower - Firesnake Room": {
+    "detailedMapName": "Firesnake Chest",
+    "detailedMapValue": 208
+  },
+  "Ganon's Tower - Map Chest": {
+    "detailedMapName": "Gt Map Chest",
+    "detailedMapValue": 209
+  },
+  "Ganon's Tower - Big Chest": {
+    "detailedMapName": "Gt Big Chest",
+    "detailedMapValue": 210
+  },
+  "Ganon's Tower - Hope Room - Left": {
+    "detailedMapName": "Hope Room Left Chest",
+    "detailedMapValue": 211
+  },
+  "Ganon's Tower - Hope Room - Right": {
+    "detailedMapName": "Hope Room Right Chest",
+    "detailedMapValue": 212
+  },
+  "Ganon's Tower - Bob's Chest": {
+    "detailedMapName": "Bob's Chest",
+    "detailedMapValue": 213
+  },
+  "Ganon's Tower - Tile Room": {
+    "detailedMapName": "TIle Room Chest",
+    "detailedMapValue": 214
+  },
+  "Ganon's Tower - Compass Room - Top Left": {
+    "detailedMapName": "Compass Room Chest 1",
+    "detailedMapValue": 215
+  },
+  "Ganon's Tower - Compass Room - Top Right": {
+    "detailedMapName": "Compass Room Chest 2",
+    "detailedMapValue": 216
+  },
+  "Ganon's Tower - Compass Room - Bottom Left": {
+    "detailedMapName": "Compass Room Chest 3",
+    "detailedMapValue": 217
+  },
+  "Ganon's Tower - Compass Room - Bottom Right": {
+    "detailedMapName": "Compass Room Chest 4",
+    "detailedMapValue": 218
+  },
+  "Ganon's Tower - Big Key Chest": {
+    "detailedMapName": "Big Key Chest 1",
+    "detailedMapValue": 219
+  },
+  "Ganon's Tower - Big Key Room - Left": {
+    "detailedMapName": "Big Key Chest 2",
+    "detailedMapValue": 220
+  },
+  "Ganon's Tower - Big Key Room - Right": {
+    "detailedMapName": "Big Key Chest 3",
+    "detailedMapValue": 221
+  },
+  "Ganon's Tower - Mini Helmasaur Room - Left": {
+    "detailedMapName": "Mini Helma Chest 1",
+    "detailedMapValue": 222
+  },
+  "Ganon's Tower - Mini Helmasaur Room - Right": {
+    "detailedMapName": "Mini Helma Chest 2",
+    "detailedMapValue": 223
+  },
+  "Ganon's Tower - Pre-Moldorm Chest": {
+    "detailedMapName": "Pre-Moldorm Chest",
+    "detailedMapValue": 224
+  },
+  "Ganon's Tower - Moldorm Chest": {
+    "detailedMapName": "Moldorm Chest",
+    "detailedMapValue": 225
+  }
+}

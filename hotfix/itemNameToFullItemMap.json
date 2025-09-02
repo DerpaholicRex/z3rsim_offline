@@ -1,0 +1,562 @@
+{
+  "ArrowUpgrade5": {
+    "id": 14,
+    "shortName": "10arrowUpgrade",
+    "longName": "Arrow Upgrade (10)"
+  },
+  "BombUpgrade5": {
+    "id": 4,
+    "shortName": "5bombUpgrade",
+    "longName": "Bomb Upgrade (5)"
+  },
+  "FiftyRupees": {
+    "id": 6,
+    "shortName": "50rupees",
+    "longName": "Fifty Rupees"
+  },
+  "FiveRupees": {
+    "id": 7,
+    "shortName": "5rupees",
+    "longName": "Five Rupees"
+  },
+  "BossHeartContainer": {
+    "id": 8,
+    "shortName": "heartContainer",
+    "longName": "Heart Container"
+  },
+  "Heart": {
+    "id": 9,
+    "shortName": "heartContainer",
+    "longName": "Heart Container (refill)"
+  },
+  "HeartContainer": {
+    "id": 8,
+    "shortName": "heartContainer",
+    "longName": "Heart Container"
+  },
+  "OneHundredRupees": {
+    "id": 11,
+    "shortName": "100rupees",
+    "longName": "One Hundred Rupees"
+  },
+  "OneRupee": {
+    "id": 12,
+    "shortName": "1rupee",
+    "longName": "One Rupee"
+  },
+  "PieceOfHeart": {
+    "id": 13,
+    "shortName": "pieceHeart",
+    "longName": "Piece of Heart"
+  },
+  "TenArrows": {
+    "id": 14,
+    "shortName": "10arrows",
+    "longName": "Ten Arrows"
+  },
+  "ThreeBombs": {
+    "id": 15,
+    "shortName": "3bombs",
+    "longName": "Three Bombs"
+  },
+  "ThreeHundredRupees": {
+    "id": 16,
+    "shortName": "300rupees",
+    "longName": "Three Hundred Rupees"
+  },
+  "Arrow": {
+    "id": 18,
+    "shortName": "singleArrow",
+    "longName": "Single Arrow"
+  },
+  "TenBombs": {
+    "id": 19,
+    "shortName": "10bombs",
+    "longName": "Ten Bombs"
+  },
+  "TwentyRupees": {
+    "id": 17,
+    "shortName": "20rupees",
+    "longName": "Twenty Rupees"
+  },
+  "Bombos": {
+    "id": 100,
+    "shortName": "bombos",
+    "longName": "Bombos"
+  },
+  "BookOfMudora": {
+    "id": 101,
+    "shortName": "book",
+    "longName": "Book of Mudora"
+  },
+  "BottleWithFairy": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "BottleWithBluePotion": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "BottleWithBee": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "BottleWithRedPotion": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "BottleWithGreenPotion": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "Bottle": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "RedPotion": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "Bee": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
+  "BugCatchingNet": {
+    "id": 104,
+    "shortName": "net",
+    "longName": "Bug Catching Net"
+  },
+  "CaneOfByrna": {
+    "id": 105,
+    "shortName": "byrna",
+    "longName": "Cane of Byrna"
+  },
+  "CaneOfSomaria": {
+    "id": 106,
+    "shortName": "somaria",
+    "longName": "Cane of Somaria"
+  },
+  "Crystal1": {
+    "id": 107,
+    "shortName": "crystal1",
+    "longName": "Crystal 1"
+  },
+  "Crystal2": {
+    "id": 108,
+    "shortName": "crystal2",
+    "longName": "Crystal 2"
+  },
+  "Crystal3": {
+    "id": 109,
+    "shortName": "crystal3",
+    "longName": "Crystal 3"
+  },
+  "Crystal4": {
+    "id": 110,
+    "shortName": "crystal4",
+    "longName": "Crystal 4"
+  },
+  "Crystal5": {
+    "id": 111,
+    "shortName": "crystal5",
+    "longName": "Crystal 5"
+  },
+  "Crystal6": {
+    "id": 112,
+    "shortName": "crystal6",
+    "longName": "Crystal 6"
+  },
+  "Crystal7": {
+    "id": 113,
+    "shortName": "crystal7",
+    "longName": "Crystal 7"
+  },
+  "Ether": {
+    "id": 114,
+    "shortName": "ether",
+    "longName": "Ether"
+  },
+  "FireRod": {
+    "id": 115,
+    "shortName": "fireRod",
+    "longName": "Fire Rod"
+  },
+  "Flippers": {
+    "id": 116,
+    "shortName": "flippers",
+    "longName": "Flippers"
+  },
+  "OcarinaInactive": {
+    "id": 117,
+    "shortName": "flute",
+    "longName": "Flute"
+  },
+  "HalfMagic": {
+    "id": 118,
+    "shortName": "halfMagic",
+    "longName": "Half Magic"
+  },
+  "Hammer": {
+    "id": 119,
+    "shortName": "hammer",
+    "longName": "Hammer"
+  },
+  "Hookshot": {
+    "id": 120,
+    "shortName": "hookshot",
+    "longName": "Hookshot"
+  },
+  "IceRod": {
+    "id": 121,
+    "shortName": "iceRod",
+    "longName": "Ice Rod"
+  },
+  "Lamp": {
+    "id": 122,
+    "shortName": "lamp",
+    "longName": "Lamp"
+  },
+  "Cape": {
+    "id": 123,
+    "shortName": "cape",
+    "longName": "Magic Cape"
+  },
+  "MagicMirror": {
+    "id": 124,
+    "shortName": "mirror",
+    "longName": "Magic Mirror"
+  },
+  "Powder": {
+    "id": 125,
+    "shortName": "powder",
+    "longName": "Magic Powder"
+  },
+  "MoonPearl": {
+    "id": 126,
+    "shortName": "moonPearl",
+    "longName": "Moon Pearl"
+  },
+  "Mushroom": {
+    "id": 127,
+    "shortName": "mushroom",
+    "longName": "Mushroom"
+  },
+  "PegasusBoots": {
+    "id": 128,
+    "shortName": "boots",
+    "longName": "Pegasus Boots"
+  },
+  "PendantOfCourage": {
+    "id": 129,
+    "shortName": "pendantCourage",
+    "longName": "Pendant of Courage"
+  },
+  "PendantOfPower": {
+    "id": 130,
+    "shortName": "pendantPower",
+    "longName": "Pendant of Power"
+  },
+  "PendantOfWisdom": {
+    "id": 131,
+    "shortName": "pendantWisdom",
+    "longName": "Pendant of Wisdom"
+  },
+  "Quake": {
+    "id": 132,
+    "shortName": "quake",
+    "longName": "Quake"
+  },
+  "Shovel": {
+    "id": 133,
+    "shortName": "shovel",
+    "longName": "Shovel"
+  },
+  "Boomerang": {
+    "id": 135,
+    "shortName": "boomerang",
+    "longName": "Boomerang"
+  },
+  "RedBoomerang": {
+    "id": 135,
+    "shortName": "boomerang",
+    "longName": "Boomerang"
+  },
+  "ProgressiveArmor": {
+    "id": 150,
+    "shortName": "tunic",
+    "longName": "Progressive Armor"
+  },
+  "ProgressiveGlove": {
+    "id": 151,
+    "shortName": "glove",
+    "longName": "Progressive Glove"
+  },
+  "ProgressiveShield": {
+    "id": 152,
+    "shortName": "shield",
+    "longName": "Progressive Shield"
+  },
+  "BlueShield": {
+    "id": 152,
+    "shortName": "shield",
+    "longName": "Progressive Shield"
+  },
+  "RedShield": {
+    "id": 152,
+    "shortName": "shield",
+    "longName": "Progressive Shield"
+  },
+  "ProgressiveSword": {
+    "id": 153,
+    "shortName": "sword",
+    "longName": "Progressive Sword"
+  },
+  "ProgressiveBow": {
+    "id": 154,
+    "shortName": "bow",
+    "longName": "Progressive Bow"
+  },
+  "BigKeyP1": {
+    "id": 201,
+    "shortName": "bigKey-1",
+    "longName": "Eastern Palace Big Key"
+  },
+  "BigKeyP2": {
+    "id": 202,
+    "shortName": "bigKey-2",
+    "longName": "Desert Palace Big Key"
+  },
+  "BigKeyP3": {
+    "id": 203,
+    "shortName": "bigKey-3",
+    "longName": "Tower of Hera Big Key"
+  },
+  "BigKeyD1": {
+    "id": 205,
+    "shortName": "bigKey-5",
+    "longName": "Palace of Darkness Big Key"
+  },
+  "BigKeyD2": {
+    "id": 206,
+    "shortName": "bigKey-6",
+    "longName": "Swamp Palace Big Key"
+  },
+  "BigKeyD3": {
+    "id": 207,
+    "shortName": "bigKey-7",
+    "longName": "Skull Woods Big Key"
+  },
+  "BigKeyD4": {
+    "id": 208,
+    "shortName": "bigKey-8",
+    "longName": "Thieves Town Big Key"
+  },
+  "BigKeyD5": {
+    "id": 209,
+    "shortName": "bigKey-9",
+    "longName": "Ice Palace Big Key"
+  },
+  "BigKeyD6": {
+    "id": 210,
+    "shortName": "bigKey-10",
+    "longName": "Misery Mire Big Key"
+  },
+  "BigKeyD7": {
+    "id": 211,
+    "shortName": "bigKey-11",
+    "longName": "Turtle Rock Big Key"
+  },
+  "BigKeyA2": {
+    "id": 212,
+    "shortName": "bigKey-12",
+    "longName": "Ganons Tower Big Key"
+  },
+  "KeyP2": {
+    "id": 215,
+    "shortName": "smallKey-2",
+    "longName": "Desert Palace Key"
+  },
+  "KeyP3": {
+    "id": 216,
+    "shortName": "smallKey-3",
+    "longName": "Tower of Hera Key"
+  },
+  "KeyH2": {
+    "id": 217,
+    "shortName": "smallKey-4",
+    "longName": "Agahnims Tower Key"
+  },
+  "KeyA1": {
+    "id": 217,
+    "shortName": "smallKey-4",
+    "longName": "Agahnims Tower Key"
+  },
+  "KeyD1": {
+    "id": 218,
+    "shortName": "smallKey-5",
+    "longName": "Palace of Darkness Key"
+  },
+  "KeyD2": {
+    "id": 219,
+    "shortName": "smallKey-6",
+    "longName": "Swamp Palace Key"
+  },
+  "KeyD3": {
+    "id": 220,
+    "shortName": "smallKey-7",
+    "longName": "Skull Woods Key"
+  },
+  "KeyD4": {
+    "id": 221,
+    "shortName": "smallKey-8",
+    "longName": "Thieves Town Key"
+  },
+  "KeyD5": {
+    "id": 222,
+    "shortName": "smallKey-9",
+    "longName": "Ice Palace Key"
+  },
+  "KeyD6": {
+    "id": 223,
+    "shortName": "smallKey-10",
+    "longName": "Misery Mire Key"
+  },
+  "KeyD7": {
+    "id": 224,
+    "shortName": "smallKey-11",
+    "longName": "Turtle Rock Key"
+  },
+  "KeyA2": {
+    "id": 225,
+    "shortName": "smallKey-12",
+    "longName": "Ganons Tower Key"
+  },
+  "MapP1": {
+    "id": 227,
+    "shortName": "map-1",
+    "longName": "Eastern Palace Map"
+  },
+  "MapP2": {
+    "id": 228,
+    "shortName": "map-2",
+    "longName": "Desert Palace Map"
+  },
+  "MapP3": {
+    "id": 229,
+    "shortName": "map-3",
+    "longName": "Tower of Hera Map"
+  },
+  "MapH2": {
+    "id": 230,
+    "shortName": "map-4",
+    "longName": "Agahnims Tower Map"
+  },
+  "MapD1": {
+    "id": 231,
+    "shortName": "map-5",
+    "longName": "Palace of Darkness Map"
+  },
+  "MapD2": {
+    "id": 232,
+    "shortName": "map-6",
+    "longName": "Swamp Palace Map"
+  },
+  "MapD3": {
+    "id": 233,
+    "shortName": "map-7",
+    "longName": "Skull Woods Map"
+  },
+  "MapD4": {
+    "id": 234,
+    "shortName": "map-8",
+    "longName": "Thieves Town Map"
+  },
+  "MapD5": {
+    "id": 235,
+    "shortName": "map-9",
+    "longName": "Ice Palace Map"
+  },
+  "MapD6": {
+    "id": 236,
+    "shortName": "map-10",
+    "longName": "Misery Mire Map"
+  },
+  "MapD7": {
+    "id": 237,
+    "shortName": "map-11",
+    "longName": "Turtle Rock Map"
+  },
+  "MapA2": {
+    "id": 238,
+    "shortName": "map-12",
+    "longName": "Ganons Tower Map"
+  },
+  "CompassP1": {
+    "id": 240,
+    "shortName": "compass-1",
+    "longName": "Eastern Palace Compass"
+  },
+  "CompassP2": {
+    "id": 241,
+    "shortName": "compass-2",
+    "longName": "Desert Palace Compass"
+  },
+  "CompassP3": {
+    "id": 242,
+    "shortName": "compass-3",
+    "longName": "Tower of Hera Compass"
+  },
+  "CompassD1": {
+    "id": 244,
+    "shortName": "compass-5",
+    "longName": "Palace of Darkness Compass"
+  },
+  "CompassD2": {
+    "id": 245,
+    "shortName": "compass-6",
+    "longName": "Swamp Palace Compass"
+  },
+  "CompassD3": {
+    "id": 246,
+    "shortName": "compass-7",
+    "longName": "Skull Woods Compass"
+  },
+  "CompassD4": {
+    "id": 247,
+    "shortName": "compass-8",
+    "longName": "Thieves Town Compass"
+  },
+  "CompassD5": {
+    "id": 248,
+    "shortName": "compass-9",
+    "longName": "Ice Palace Compass"
+  },
+  "CompassD6": {
+    "id": 249,
+    "shortName": "compass-10",
+    "longName": "Misery Mire Compass"
+  },
+  "CompassD7": {
+    "id": 250,
+    "shortName": "compass-11",
+    "longName": "Turtle Rock Compass"
+  },
+  "CompassA2": {
+    "id": 251,
+    "shortName": "compass-12",
+    "longName": "Ganons Tower Compass"
+  },
+  "Triforce": {
+    "id": 270,
+    "shortName": "triforce",
+    "longName": "Triforce"
+  }
+}
