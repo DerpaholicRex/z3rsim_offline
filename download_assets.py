@@ -4,13 +4,16 @@ from urllib.parse import urljoin, unquote
 
 base_url = "https://z3rsim.com/"
 asset_paths = [
-    '/assets/dungeon-tracker-icons/chest13.png',
-   '/assets/maps/Dark World/dw-hint-cave.png',
-   '/assets/maps/Light World/lw-hint-cave.png',
-    "/assets/dungeon-tracker-icons/dungeon1.png",
-
+ 
+    "/assets/dungeon-tracker-icons/initials10.png",
+    "/assets/dungeon-tracker-icons/initials11.png",
+    "/assets/dungeon-tracker-icons/initials12.png"
 ]
 #asset_paths = [
+#    '/assets/dungeon-tracker-icons/chest13.png',
+#    '/assets/maps/Dark World/dw-hint-cave.png',
+#    '/assets/maps/Light World/lw-hint-cave.png',
+#     "/assets/dungeon-tracker-icons/dungeon1.png",
     # 'assets/maps/Dark World/dw-hammer-pegs.png', 
     # 'assets/maps/Dark World/dw-hype-cave.png', 
     # 'assets/maps/Dark World/dw-bomb-shop.png', 

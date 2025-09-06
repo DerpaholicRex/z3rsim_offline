@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<base href="/">
+<script>
+  // Dynamically set base href based on current URL
+  const baseHref = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? '/' 
+    : '/z3rsim-offline/';
+  document.write('<base href="' + baseHref + '">');
+</script>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><script type="text/javascript" async="" src="analytics.js"></script><script type="text/javascript" async="" src="js"></script><script async="" src="js_002"></script><script>window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
