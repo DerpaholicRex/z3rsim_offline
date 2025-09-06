@@ -4,22 +4,27 @@ from urllib.parse import urljoin, unquote
 
 base_url = "https://z3rsim.com/"
 asset_paths = [
+    '/assets/dungeon-tracker-icons/chest13.png',
+   '/assets/maps/Dark World/dw-hint-cave.png',
+   '/assets/maps/Light World/lw-hint-cave.png',
+    "/assets/dungeon-tracker-icons/dungeon1.png",
+
 ]
 #asset_paths = [
-    'assets/maps/Dark World/dw-hammer-pegs.png', 
-    'assets/maps/Dark World/dw-hype-cave.png', 
-    'assets/maps/Dark World/dw-bomb-shop.png', 
-    'assets/maps/Dark World/dw-ganon.png', 
-    'assets/maps/Dark World/dw-fat-fairy.png', 
-    'assets/maps/Dark World/dw-mire-shed.png',
-    'assets/maps/Misery Mire/mm-compass-flipped.png', 
-    'assets/maps/Misery Mire/mm-map-flipped.png',
-    'assets/maps/Misery Mire/mm-fish-spine.png',
-    'assets/maps/Misery Mire/mm-fish-spine-flipped.png', 
-    'assets/maps/Dark World/dw-tr-ledge.png',
-    'assets/maps/Light World/lw-tr-ledge.png',
-    'assets/maps/Light World/lw-mimic.png', 
-    'assets/maps/undefined/Ganon.png'
+    # 'assets/maps/Dark World/dw-hammer-pegs.png', 
+    # 'assets/maps/Dark World/dw-hype-cave.png', 
+    # 'assets/maps/Dark World/dw-bomb-shop.png', 
+    # 'assets/maps/Dark World/dw-ganon.png', 
+    # 'assets/maps/Dark World/dw-fat-fairy.png', 
+    # 'assets/maps/Dark World/dw-mire-shed.png',
+    # 'assets/maps/Misery Mire/mm-compass-flipped.png', 
+    # 'assets/maps/Misery Mire/mm-map-flipped.png',
+    # 'assets/maps/Misery Mire/mm-fish-spine.png',
+    # 'assets/maps/Misery Mire/mm-fish-spine-flipped.png', 
+    # 'assets/maps/Dark World/dw-tr-ledge.png',
+    # 'assets/maps/Light World/lw-tr-ledge.png',
+    # 'assets/maps/Light World/lw-mimic.png', 
+    # 'assets/maps/undefined/Ganon.png'
 
 # "assets/maps/Light World/lw-sq.png"
 # "assets/maps/Light World/lw-flute-map.png"

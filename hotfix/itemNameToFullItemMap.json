@@ -89,6 +89,11 @@
     "shortName": "book",
     "longName": "Book of Mudora"
   },
+  "BottleWithGoldBee": {
+    "id": 102,
+    "shortName": "bottle",
+    "longName": "Bottle"
+  },
   "BottleWithFairy": {
     "id": 102,
     "shortName": "bottle",
