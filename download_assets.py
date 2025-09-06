@@ -5,11 +5,13 @@ from urllib.parse import urljoin, unquote
 base_url = "https://z3rsim.com/"
 asset_paths = [
  
-    "/assets/dungeon-tracker-icons/initials10.png",
-    "/assets/dungeon-tracker-icons/initials11.png",
-    "/assets/dungeon-tracker-icons/initials12.png"
+
+    "/assets/dungeon-tracker-icons/medallion0.png"
 ]
 #asset_paths = [
+    # "/assets/dungeon-tracker-icons/initials10.png",
+    # "/assets/dungeon-tracker-icons/initials11.png",
+    # "/assets/dungeon-tracker-icons/initials12.png",
 #    '/assets/dungeon-tracker-icons/chest13.png',
 #    '/assets/maps/Dark World/dw-hint-cave.png',
 #    '/assets/maps/Light World/lw-hint-cave.png',

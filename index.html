@@ -837,6 +837,10 @@ function addFileBehavior() {
             console.log('💾 Item array available as:', itemArray);
 
             localStorage.setItem("itemArray", itemArray?.join(""))
+
+            // Show success notification
+            showSuccessNotification('Spoiler log successfully loaded!');
+
             // You can now use the itemArray in your application
             // For example: window.currentItemArray = itemArray;
 
@@ -852,17 +856,97 @@ function addFileBehavior() {
 document.addEventListener('DOMContentLoaded', function() {
     localStorage.removeItem("itemArray")
     addSpoilerLogButtonToNavbar();
-
+    addWarningBanner();
     // Retry after a short delay to ensure Angular has loaded
     setTimeout(addSpoilerLogButtonToNavbar, 100);
     setTimeout(addSpoilerLogButtonToNavbar, 500);
     setTimeout(addSpoilerLogButtonToNavbar, 1000);
 
-    
+
     // Handle spoiler log file upload
     setTimeout(addFileBehavior, 1100);
 
+    // Add warning banner
+    setTimeout(addWarningBanner, 1200);
+
 });
+
+// Function to add warning banner
+function addWarningBanner() {
+    // Check if banner already exists
+    const existingBanner = document.querySelector('.warning-banner');
+    if (existingBanner) {
+        return; // Banner already exists
+    }
+
+    // Find the navbar
+    const navbar = document.querySelector('nav.navbar');
+    if (!navbar) {
+        return; // Navbar not found yet
+    }
+
+    // Create the warning banner
+    const banner = document.createElement('div');
+    banner.className = 'alert alert-warning warning-banner';
+    banner.setAttribute('role', 'alert');
+    banner.style.margin = '0';
+    banner.style.borderRadius = '0';
+    banner.innerHTML = `
+        <strong>⚠️ Warning:</strong> The settings on this page are currently non-functional.
+        They will be either removed or fixed in a future update.
+        For now, only the <strong>Overworld Simple/Advanced toggle</strong> has any effect.
+
+        To Start playing, upload a spoiler log from https://alttpr.com/en/randomizer via the Load Spoiler button in the navbar
+    `;
+
+    // Insert the banner after the navbar
+    navbar.parentNode.insertBefore(banner, navbar.nextSibling);
+}
+
+// Function to show success notification
+function showSuccessNotification(message) {
+    // Remove any existing success notification
+    const existingNotification = document.querySelector('.success-notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+
+    // Create success notification
+    const notification = document.createElement('div');
+    notification.className = 'alert alert-success success-notification';
+    notification.setAttribute('role', 'alert');
+    notification.style.position = 'fixed';
+    notification.style.top = '20px';
+    notification.style.right = '20px';
+    notification.style.zIndex = '9999';
+    notification.style.minWidth = '300px';
+    notification.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+    notification.innerHTML = `
+        <strong>✅ Success:</strong> ${message}
+    `;
+
+    // Add close button
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'close';
+    closeBtn.setAttribute('data-dismiss', 'alert');
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.innerHTML = '<span aria-hidden="true">&times;</span>';
+    closeBtn.onclick = function() {
+        notification.remove();
+    };
+    notification.appendChild(closeBtn);
+
+    // Add to page
+    document.body.appendChild(notification);
+
+    // Auto-remove after 5 seconds
+    setTimeout(function() {
+        if (notification.parentNode) {
+            notification.remove();
+        }
+    }, 5000);
+}
 
 
 
