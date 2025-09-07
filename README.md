@@ -104,7 +104,7 @@ Bash
 http-server -p 8000
 Open your web browser and go to http://localhost:8000.
 
-Method 3: PHP Built-in Server
+# Method 3: PHP Built-in Server
 If you have PHP installed:
 
 Navigate to the directory containing this README file.
@@ -116,7 +116,7 @@ Bash
 php -S localhost:8000
 Open your web browser and go to http://localhost:8000.
 
-## Method 3: Other Options
+## Method 4: Other Options
 Apache/Nginx: Configure a virtual host pointing to this directory.
 
 Live Server (VS Code Extension): Right-click on index.html and select "Open with Live Server".
@@ -161,4 +161,4 @@ This is an offline clone of the raw html from https://z3rsim.com/ (not even the 
 However, until the Kyong returns, feel free to make contributions here.
 
 If @Kyong wants me to take this down at any point, please ask and i'll do so gladly, until that point i'll provide it to anyone in the community who is interested
-(alternatively if you want to share the source code, i'd love tbat over what i had to do here)
+(alternatively if you want to share the source code, i'd love that over what i had to do here)
