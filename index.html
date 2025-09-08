@@ -864,8 +864,27 @@ function addFileBehavior() {
           try {
             console.log('📁 Loading spoiler log file:', file.name);
 
+            // Extract seed from file name if present
+            let seed = null;
+            const fileName = file.name;
+            const lastUnderscoreIndex = fileName.lastIndexOf('_');
+            const extensionIndex = fileName.lastIndexOf('.');
+
+            if (lastUnderscoreIndex !== -1 && extensionIndex !== -1 && lastUnderscoreIndex < extensionIndex) {
+              seed = fileName.substring(lastUnderscoreIndex + 1, extensionIndex);
+              console.log('🔑 Extracted seed from file name:', seed);
+            } else {
+              console.log('ℹ️ No seed found in file name');
+            }
+
             const text = await file.text();
             const spoilerLogData = JSON.parse(text);
+
+            // Save seed to localStorage if extracted
+            if (seed) {
+              localStorage.setItem("seedHash", seed);
+              console.log('💾 Seed hash stored:', seed);
+            }
 
             // Save to localStorage
             window.saveSpoilerLogToLocalStorage(spoilerLogData);
@@ -877,6 +896,14 @@ function addFileBehavior() {
             console.log('💾 Item array available as:', itemArray);
 
             localStorage.setItem("itemArray", itemArray?.join(""))
+
+            // Update page title with seed if available
+            if (seed) {
+              const titleElement = document.querySelector('h1.title small');
+              if (titleElement) {
+                titleElement.textContent = `(Open) Seed: ${seed}`;
+              }
+            }
 
             // Show success notification
             showSuccessNotification('Spoiler log successfully loaded!');
@@ -1010,6 +1037,8 @@ async function generateNewSeed() {
 
         // Process the spoiler data using existing functions
         window.saveSpoilerLogToLocalStorage(spoilerData.spoiler);
+        localStorage.setItem("seedHash", spoilerData?.hash)
+
         const itemArray = await window.loadAndGenerateItemArray();
 
         console.log('📊 Item array generated:', itemArray?.length, 'locations');

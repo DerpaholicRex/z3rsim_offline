@@ -3407,6 +3407,7 @@ webpackJsonp(
                                 var t = !0,
                                     o = n.component;
                                 if ("click" === e) {
+                                    debugger;// play button
                                     t = !1 !== o.onSubmit() && t;
                                 }
                                 return t;
@@ -24316,11 +24317,17 @@ webpackJsonp(
                                 var u;
                                 // debugger; // change offline to false to play offline
                                 var online = false;
+                                var seedHash = localStorage.getItem("seedHash")
+
+                                var seedStr = seedHash? 
+                                `${localStorage.getItem("seedHash")} -> https://alttpr.com/en/h/${seedHash}` 
+                                : "BrXZ47EgQR4Qq8A: (Using Default Seed)"
+                            
                                 const fakeObservable = {
                                     prefix: localStorage.getItem("seedMetadataPrefix") || "000001xXJAo0A0ebe3WP10000010022000000000",
                                     itemArray: localStorage.getItem("itemArray"),  
                                     e: {
-                                        "seed":"BrXZ47EgQR4Qq8A",
+                                        "seed": seedStr,
                                         "logic":"",
                                         "variation":"none",
                                         "goal":"ganon",
