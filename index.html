@@ -29,7 +29,6 @@
       
       <div _ngcontent-c0="" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul _ngcontent-c0="" class="nav navbar-nav">
-          <li _ngcontent-c0=""><a _ngcontent-c0="">Generate Seed</a></li>
           <li _ngcontent-c0="">
             <input type="file" id="spoiler-log-input" accept=".json,.txt" style="display: none;">
             <a _ngcontent-c0="" type="button" onclick="document.getElementById('spoiler-log-input').click()">
@@ -773,6 +772,38 @@
 <script src="src/spoilerLogAdapter.js"></script>
 
 <script>
+// Function to add Generate Seed button to navbar
+function addGenerateSeedButtonToNavbar() {
+    // Check if Generate Seed button already exists in navbar
+    const existingButton = document.getElementById('generate-seed-button');
+    if (existingButton) {
+        return; // Button already exists
+    }
+
+    // Find the navbar navigation list
+    const navbarNav = document.querySelector('.navbar .nav.navbar-nav');
+    if (!navbarNav) {
+        return; // Navbar not found yet
+    }
+
+    // Create the list item with Generate Seed button
+    const li = document.createElement('li');
+    const button = document.createElement('a');
+    button.type = 'button';
+    button.id = 'generate-seed-button';
+    button.onclick = function() { generateNewSeed(); };
+    button.innerHTML = '<i class="fa fa-magic"></i> Generate Seed';
+
+    li.appendChild(button);
+
+    // Add as the first item in the navbar
+    if (navbarNav.firstChild) {
+        navbarNav.insertBefore(li, navbarNav.firstChild);
+    } else {
+        navbarNav.appendChild(li);
+    }
+}
+
 // Function to add Load Spoiler Log button to navbar
 function addSpoilerLogButtonToNavbar() {
     // Check if button already exists in navbar
@@ -852,22 +883,25 @@ function addFileBehavior() {
       });
     }
 
+// Function to add all UI elements
+function addUiElements() {
+    addGenerateSeedButtonToNavbar();
+    addSpoilerLogButtonToNavbar();
+    addWarningBanner();
+}
+
 // Try to add button immediately, then retry with timeout for Angular
 document.addEventListener('DOMContentLoaded', function() {
     localStorage.removeItem("itemArray")
-    addSpoilerLogButtonToNavbar();
-    addWarningBanner();
+    addUiElements();
     // Retry after a short delay to ensure Angular has loaded
-    setTimeout(addSpoilerLogButtonToNavbar, 100);
-    setTimeout(addSpoilerLogButtonToNavbar, 500);
-    setTimeout(addSpoilerLogButtonToNavbar, 1000);
+    setTimeout(addUiElements, 100);
+    setTimeout(addUiElements, 500);
+    setTimeout(addUiElements, 1000);
 
 
     // Handle spoiler log file upload
     setTimeout(addFileBehavior, 1100);
-
-    // Add warning banner
-    setTimeout(addWarningBanner, 1200);
 
 });
 
@@ -901,6 +935,95 @@ function addWarningBanner() {
 
     // Insert the banner after the navbar
     navbar.parentNode.insertBefore(banner, navbar.nextSibling);
+}
+
+// Function to generate new seed using All Origins proxy
+async function generateNewSeed() {
+    try {
+        console.log('🎲 Generating new seed...');
+
+        // Show loading state
+        const button = document.getElementById('generate-seed-button');
+        const originalHTML = button.innerHTML;
+        button.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Generating...';
+        button.style.pointerEvents = 'none';
+
+        // All Origins proxy URL
+        const proxyUrl = 'https://api.allorigins.win/raw?url=';
+        const targetUrl = 'https://alttpr.com/api/randomizer';
+        const fullUrl = proxyUrl + encodeURIComponent(targetUrl);
+
+        // Default seed settings (same as our test)
+        const seedParams = {
+            glitches: "none",
+            item_placement: "advanced",
+            dungeon_items: "standard",
+            accessibility: "items",
+            goal: "ganon",
+            crystals: { ganon: "7", tower: "7" },
+            mode: "open",
+            entrances: "none",
+            hints: "on",
+            weapons: "randomized",
+            item: { pool: "normal", functionality: "normal" },
+            tournament: false,
+            spoilers: "on",
+            lang: "en",
+            enemizer: {
+                boss_shuffle: "none",
+                enemy_shuffle: "none",
+                enemy_damage: "default",
+                enemy_health: "default"
+            }
+        };
+
+        console.log('📡 Calling alttpr.com API via All Origins proxy...');
+
+        const response = await fetch(fullUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(seedParams)
+        });
+
+        if (!response.ok) {
+            if (response.status === 429) {
+                throw new Error('Rate limit exceeded. Please wait before trying again.');
+            }
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const spoilerData = await response.json();
+        console.log('✅ Seed generated successfully!', spoilerData);
+
+        // Process the spoiler data using existing functions
+        window.saveSpoilerLogToLocalStorage(spoilerData.spoiler);
+        const itemArray = await window.loadAndGenerateItemArray();
+
+        console.log('📊 Item array generated:', itemArray?.length, 'locations');
+        localStorage.setItem("itemArray", itemArray?.join(""))
+
+        // Show success notification
+        showSuccessNotification('New seed generated successfully! 🎉');
+
+        // Update the page title with new seed hash
+        if (spoilerData.hash) {
+            const titleElement = document.querySelector('h1.title small');
+            if (titleElement) {
+                titleElement.textContent = `(Open) Seed: ${spoilerData.hash}`;
+            }
+        }
+
+    } catch (error) {
+        console.error('❌ Seed generation failed:', error);
+        showErrorNotification(`Failed to generate seed: ${error.message}`);
+    } finally {
+        // Reset button state
+        const button = document.getElementById('generate-seed-button');
+        if (button) {
+            button.innerHTML = '<i class="fa fa-magic"></i> Generate Seed';
+            button.style.pointerEvents = 'auto';
+        }
+    }
 }
 
 // Function to show success notification
