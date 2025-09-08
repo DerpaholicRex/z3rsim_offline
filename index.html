@@ -935,12 +935,15 @@ function addWarningBanner() {
     banner.style.margin = '0';
     banner.style.borderRadius = '0';
     banner.innerHTML = `
-        <strong>⚠️ Warning:</strong> The settings on this page are currently non-functional.
+        <strong>⚠️ Warning:</strong> 
+        </br>
+        The settings on this page are currently non-functional.
         They will be either removed or fixed in a future update.
         For now, only the <strong>Overworld Simple/Advanced toggle</strong> has any effect.
-
+        <hr>
         To start playing, either click Generate Seed or upload a spoiler log from https://alttpr.com/en/randomizer via the Load Spoiler button in the navbar
-        Generate Seed will generate a Standard world seed with default settings
+        </br>
+        Generate Seed will generate a Standard world seed with default settings, you can generate seed no more then 250 times per day
     `;
 
     // Insert the banner after the navbar
