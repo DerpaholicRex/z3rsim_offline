@@ -774,16 +774,25 @@
 <script>
 // Function to add Generate Seed button to navbar
 function addGenerateSeedButtonToNavbar() {
-    // Check if Generate Seed button already exists in navbar
-    const existingButton = document.getElementById('generate-seed-button');
-    if (existingButton) {
-        return; // Button already exists
-    }
-
     // Find the navbar navigation list
     const navbarNav = document.querySelector('.navbar .nav.navbar-nav');
     if (!navbarNav) {
         return; // Navbar not found yet
+    }
+
+    // Remove any static HTML Generate Seed elements
+    const staticElements = navbarNav.querySelectorAll('li');
+    for (const li of staticElements) {
+        const link = li.querySelector('a');
+        if (link && link.textContent.trim() === 'Generate Seed' && !link.id) {
+            li.remove();
+        }
+    }
+
+    // Check if Generate Seed button already exists in navbar
+    const existingButton = document.getElementById('generate-seed-button');
+    if (existingButton && existingButton.onclick) {
+        return; // Button already exists and is properly configured
     }
 
     // Create the list item with Generate Seed button
